@@ -1,0 +1,164 @@
+.header {
+  width: 100%;
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0 5rem;
+  opacity: 0;
+}
+.header img {
+  height: 70%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+.headerTextBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerTextBox a {
+  color: var(--white) !important;
+  font-size: 2rem;
+  font-weight: 300;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+.headerTextBox a::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: var(--pink);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.headerTextBox a:hover::before {
+  width: 100%;
+}
+.headerTextBox > * {
+  margin: 0 0 0 2.5rem;
+}
+.headerTextBox a:hover {
+  color: var(--pink) !important;
+}
+.headerTextBox button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  position: relative;
+}
+.dropBox {
+  min-width: 20rem;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 126%);
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+.headerTextBox button:focus-within > .dropBox {
+  display: flex;
+}
+.dropBox a:nth-child(1) {
+  margin: 0 0 1.5rem 0;
+}
+.header > svg {
+  color: var(--white);
+  font-size: 2.5rem;
+  display: none;
+}
+.mobHeader {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    var(--darkblue),
+    var(--purple),
+    var(--lightblue),
+    var(--pink)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.mobLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem 2.5rem;
+}
+.mobLinks a {
+  color: var(--white) !important;
+  font-size: 2.25rem;
+  font-weight: 300;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.mobLinks > * {
+  margin: 0 0 1.5rem 0;
+  width: 100%;
+}
+.mobLinks button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  position: relative;
+}
+.dropBoxMob {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  margin: 0.5rem 0 0 0;
+}
+.dropBoxMob a:nth-child(1) {
+  margin: 0 0 1.5rem 0;
+}
+.mobLinks button:focus-within > .dropBoxMob {
+  display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .headerTextBox {
+    display: none;
+  }
+  .header {
+    padding: 0 2.5rem;
+    height: 6.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(
+      var(--darkblue),
+      var(--purple),
+      var(--lightblue)
+    );
+  }
+  .header > svg {
+    display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+  .header {
+    padding: 0 1.5rem;
+    opacity: 1;
+  }
+}

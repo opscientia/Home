@@ -1,0 +1,494 @@
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: -7.5rem 0 0 0;
+  padding: 7.5rem 0 0 0;
+}
+.heroSection video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.heroContent {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 0 10%;
+}
+.heroContent h1 {
+  font-size: 8.5rem;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-shadow: 2px 2px 0 var(--lightblue);
+  opacity: 0;
+}
+.explore {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+}
+.explore svg {
+  font-size: 2.25rem;
+  margin: 1rem 0 0 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0.75rem;
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.explore svg:hover {
+  background: linear-gradient(to right, var(--pink), var(--darkblue));
+  border: 1px solid var(--pink);
+}
+.joinMovement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+.joinMovementTextDetails {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.joinMovement > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+.joinMovementTextDetails img {
+  height: 25rem;
+  width: 25rem;
+  object-fit: contain;
+  margin: 5rem 0 0 0;
+}
+.joinMovementTextDetails h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 2px 2px 0 var(--lightblue);
+  text-align: center;
+}
+.movementSeparator {
+  width: 50%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 5rem 0;
+}
+.joinMovementTextDetails p {
+  font-size: 1.75rem;
+  color: var(--white);
+  text-align: center;
+}
+.joinMovementTextDetails button {
+  margin: 5rem 0 0 0;
+}
+.parallexSection {
+  width: 100%;
+  padding: 5rem 0;
+  position: relative;
+}
+.parallexSection > * {
+  width: 100%;
+}
+.parallexBackground {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+.parallexBoxesParent {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.parallexBoxesParent > h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 2px 2px 0 var(--lightblue);
+  text-align: center;
+  width: 100%;
+  margin: 0 0 5rem 0;
+}
+.reviewsBanner {
+  width: 60%;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    45deg,
+    rgba(254, 198, 198, 0.75),
+    rgba(109, 156, 203, 0.75)
+  );
+}
+.reviewBannerDetails {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 15;
+}
+.reviewBannerDetails h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 2px 2px 0 var(--lightblue);
+}
+.reviewBannerDetails h1.sponsorsP {
+  font-size: 3.5rem;
+  color: var(--darkblue);
+  font-weight: 500;
+  text-shadow: 0 0 0 var(--lightblue);
+  margin: 0;
+}
+.signupDetailsBox {
+  display: none;
+}
+.signupHeading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.signupHeading svg {
+  font-size: 2.5rem;
+  color: var(--white);
+  transition: 0.75s;
+}
+.reviewBox {
+  width: 100%;
+  border: 1px solid var(--light);
+  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.75rem;
+  color: var(--black);
+  font-weight: 400;
+}
+.reviewLeftRightBtns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.reviewLeftRightBtns span {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--pink);
+  margin: 0 1.5rem 0 0;
+  transition: 0.5s;
+  cursor: pointer;
+  background: linear-gradient(var(--darkblue), var(--purple), var(--lightblue));
+}
+
+.reviewLeftRightBtns span:hover {
+  box-shadow: 0 3px 5px rgba(87, 128, 195, 0.25);
+}
+.reviewSlider {
+  padding: 5rem 0 1.5rem 0 !important;
+}
+.reviewBox span {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 2.75rem;
+  background-color: var(--darkblue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(1.5rem, -50%);
+}
+.reviewBannerDetails h2 {
+  font-size: 1.75rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 1px 1px 0 var(--lightblue);
+  margin: 1.5rem 0;
+}
+.reviewSeparator {
+  width: 25%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 5rem 0 1.5rem 0;
+}
+.donateBanner {
+  width: 60%;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: 5rem 0 5rem auto;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.donateBanner > img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.donateBanner h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 2px 2px 0 var(--lightblue);
+  margin: 1.5rem 0;
+}
+.donateBanner p {
+  font-size: 1.75rem;
+  color: var(--dark);
+  margin: 0 0 1.5rem 0;
+}
+.donateBanner button {
+  margin: 1.5rem 0 0 0;
+}
+.marqueeParent {
+  margin: 5rem 0 0 0;
+}
+.marqueeBanner {
+  width: 75%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+}
+.sponsorsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2.5rem;
+  margin: 2.5rem 0 0 0;
+}
+.sponsorsGrid img {
+  width: 100%;
+  object-fit: contain;
+}
+.signUp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+.signupTextDetails {
+  width: 60%;
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+.signUp img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+.signupTextDetails h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-shadow: 2px 2px 0 var(--lightblue);
+}
+.inputGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2.5rem;
+  margin: 2.5rem 0;
+}
+.inputGrid input {
+  width: 100%;
+  border: 1px solid transparent;
+  outline: 0;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 1.5rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+.inputGrid input::placeholder,
+.signupTextDetails textarea::placeholder {
+  color: var(--dark);
+}
+.checksBox {
+  margin: 2.5rem 0;
+}
+.checksBox h2 {
+  font-size: 1.75rem;
+  color: var(--white);
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+}
+.checksBox > div {
+  margin: 0.75rem 0 0 0;
+}
+.signupTextDetails textarea {
+  min-width: 100%;
+  max-width: 100%;
+  border: 1px solid transparent;
+  outline: 0;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 1.5rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  min-height: 15rem;
+  max-height: 15rem;
+  margin: 0 0 1.5rem 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .heroContent h1 {
+    font-size: 6.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .heroContent h1 {
+    font-size: 5rem;
+  }
+  .sponsorsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reviewsBanner {
+    width: 100%;
+  }
+  .heroContent h1 br {
+    display: none;
+  }
+  .parallexSection {
+    padding: 2.5rem 0;
+  }
+  .explore {
+    transform: translate(-50%, -150%);
+  }
+  .joinMovementTextDetails {
+    width: 100%;
+  }
+  .joinMovementTextDetails h1 {
+    font-size: 2.25rem;
+  }
+  .joinMovementTextDetails img {
+    height: 15rem;
+    width: 15rem;
+    object-fit: contain;
+    margin: 2.5rem 0 0 0;
+  }
+  .reviewBannerDetails h1 {
+    font-size: 2.25rem;
+  }
+  .reviewBannerDetails h1.sponsorsP {
+    font-size: 2.25rem;
+  }
+  .donateBanner {
+    width: 100%;
+  }
+  .marqueeBanner {
+    width: 100%;
+  }
+  .signUp {
+    padding: 2.5rem;
+  }
+  .signupTextDetails {
+    width: 100%;
+  }
+  .signupTextDetails h1 {
+    font-size: 2.25rem;
+  }
+  .inputGrid {
+    grid-template-columns: 1fr;
+    margin: 2.5rem 0;
+  }
+  .marqueeParent {
+    margin: 2.5rem 0 0 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .heroContent h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heroContent h1 {
+    font-size: 2.75rem;
+  }
+
+  .donateBanner h1 {
+    font-size: 2.25rem;
+  }
+  .sponsorsGrid {
+    grid-template-columns: 1fr;
+  }
+  .sponsorsGrid img {
+    width: 75%;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+}
