@@ -22,7 +22,7 @@ const Footer = () => {
       <div className="box">
         <div className={st.footerGrid}>
           <div className={st.footerGridBox}>
-            <h1>Useful Links</h1>
+            {/* <h1>Useful Links</h1> */}
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <a href="https://pulse.opsci.io/">News</a>
@@ -31,7 +31,7 @@ const Footer = () => {
             <Link href="/careers">Careers</Link>
           </div>
           <div className={st.footerGridBox}>
-            <h1>Social Links</h1>
+            {/* <h1>Social Links</h1> */}
             <a href="https://pulse.opsci.io/">
               <FaMedium /> Medium
             </a>
@@ -49,8 +49,8 @@ const Footer = () => {
             </a>
           </div>
           <div className={st.footerGridBox}>
-            <h1>Subscribe to our Email List</h1>
-            <input type="text" placeholder="Email" />
+            {/* <h1>Subscribe to our Email List</h1> */}
+            <input type="text" placeholder="Subscribe to our Email List" />
           </div>
         </div>
         <p className={st.copyStatement}>

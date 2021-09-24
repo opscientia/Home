@@ -13,13 +13,13 @@ const home = () => {
       {/* Hero Section */}
       <div className={st.heroSection} id="top">
         <video
-          src="./assets/hero-video.mp4"
+          src="./assets/about-video.mp4"
           muted={true}
           autoPlay={true}
           loop={true}
         ></video>
         <div className={st.heroContent}>
-          <h1>COMING SOON!</h1>
+          <h2>COMING SOON!</h2>
         </div>
       </div>
     </div>

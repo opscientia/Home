@@ -75,8 +75,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".aboutTextGridAnim1",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -97,8 +97,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".aboutTextGridAnim2",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -119,8 +119,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".aboutTextGridAnim3",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -141,8 +141,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".aboutTextGridAnim4",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -163,8 +163,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".whoCardAnim > div",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -185,8 +185,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".advisorsCardAnim > div",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -207,8 +207,8 @@ const home = () => {
         duration: 1,
         scrollTrigger: {
           trigger: ".communityCardAnim > div",
-          start: "top 90%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1.5,
           toggleActions: "start none none none",
         },
@@ -261,17 +261,23 @@ const home = () => {
         </div>
       </div>
 
+      {/* Logo Section */}
+      <div className={st.joinMovement}>
+        <img src="./assets/signup-banner.png" alt="" />
+        <div className={st.joinMovementTextDetails}>
+          <h1>
+            A Web3-powered open science ecosystem that unlocks data silos,
+            coordinates collaboration and democratises funding
+          </h1>
+          <img src="./assets/logo-badge.png" alt="" />
+        </div>
+      </div>
+
       {/* Parallex Section */}
       <div className={st.parallexSection} id="joinMovement">
-        <video
-          src="./assets/gradient-video.mp4"
-          muted={true}
-          autoPlay={true}
-          loop={true}
-          className={st.parallexBackground}
-        ></video>
+        
         <div className="box">
-          <div className={st.parallexBoxesParent}>
+          <div className={stt.parallexBoxesParent}>
             <div className={stt.aboutTextGrid + " " + "aboutTextGridAnim1"}>
               <div className={stt.atgTextBox}>
                 <h1>What is Opscientia?</h1>
@@ -296,9 +302,9 @@ const home = () => {
                   height="669"
                   src="https://www.youtube.com/embed/mSMsDobOOAE"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>
@@ -357,26 +363,14 @@ const home = () => {
         </div>
       </div>
 
-      {/* Sign Up Section */}
-      <div className={st.joinMovement}>
-        <img src="./assets/signup-banner.png" alt="" />
-        <div className={st.joinMovementTextDetails}>
-          <h1>
-            A Web3-powered open science ecosystem that unlocks data silos,
-            coordinates collaboration and democratises funding
-          </h1>
-          <img src="./assets/logo-badge.png" alt="" />
-        </div>
-      </div>
-
       {/* Parallex Section */}
-      <div className={st.parallexSection}>
+      <div className={st.parallexSection  + " " + st.ps2}>
         <video
           src="./assets/parallex-banner.mp4"
           muted={true}
           autoPlay={true}
           loop={true}
-          className={st.parallexBackground}
+          className={st.parallexBackground + " " + st.pb2}
         ></video>
         <div className="box">
           <div className={st.parallexBoxesParent}>

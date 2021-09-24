@@ -25,8 +25,11 @@ const Header = () => {
   const hideMobHeader = () => {
     $(".mobHeaderTog").css({ display: "none" });
   };
+  const togChildren = () => {
+    $(".dropBoxMobTog").slideToggle(500);
+  };
   return (
-    <div className={st.header + " " + 'headerAnim'}>
+    <div className={st.header + " " + "headerAnim"}>
       <Link href="/">
         <img src="./assets/white-logo.png" alt="" />
       </Link>
@@ -67,10 +70,10 @@ const Header = () => {
           </Link>
           <a href="https://pulse.opsci.io/">News</a>
           <button>
-            <a>
+            <a onClick={togChildren}>
               Community <MdArrowDropDown />
             </a>
-            <div className={st.dropBoxMob}>
+            <div className={st.dropBoxMob + " " + "dropBoxMobTog"}>
               <a href="https://discord.com/invite/n7UBwrGywZ">Discord</a>
               <a href="https://hack.opsci.io/">Discourse</a>
             </div>

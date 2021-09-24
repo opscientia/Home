@@ -38,7 +38,7 @@ a {
   border: 0;
   outline: 0;
   font-size: 1.75rem;
-  color: var(--pink);
+  color: var(--white);
   background: linear-gradient(var(--darkblue), var(--purple), var(--lightblue));
   font-weight: 500;
   padding: 1.25rem 3.5rem;
@@ -127,9 +127,7 @@ a {
   left: 0;
   align-items: center;
   justify-content: center;
-  background-color: rgba(144, 238, 144, 0.342);
 }
-
 .main_animation_container svg {
   position: relative;
   width: 100%;
@@ -144,4 +142,11 @@ a {
   .gradientBtn {
     font-size: 1.5rem;
   }
+}
+.faq1Box,
+.faq2Box,
+.faq3Box,
+.faq4Box
+{
+  display: none;
 }
