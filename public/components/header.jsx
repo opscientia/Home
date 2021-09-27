@@ -18,6 +18,9 @@ const Header = () => {
         duration: 1,
       }
     );
+    $(".box").click(()=> {
+      $(".dropBoxMobTog").removeClass("dropDrop");
+    })
   }, []);
   const showMobHeader = () => {
     $(".mobHeaderTog").css({ display: "block" });
@@ -26,7 +29,8 @@ const Header = () => {
     $(".mobHeaderTog").css({ display: "none" });
   };
   const togChildren = () => {
-    $(".dropBoxMobTog").slideToggle(500);
+    $(".dropBoxMobTog").toggleClass("dropDrop");
+    $(".triggerDrop").toggleClass("dropStyle")
   };
   return (
     <div className={st.header + " " + "headerAnim"}>
@@ -40,10 +44,10 @@ const Header = () => {
         </Link>
         <a href="https://pulse.opsci.io/">News</a>
         <button>
-          <a>
+          <a onClick={togChildren} className='triggerDrop'>
             Community <MdArrowDropDown />
           </a>
-          <div className={st.dropBox}>
+          <div className={st.dropBox + " " + "dropBoxMobTog"}>
             <a href="https://discord.com/invite/n7UBwrGywZ">Discord</a>
             <a href="https://hack.opsci.io/">Discourse</a>
           </div>

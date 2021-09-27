@@ -135,6 +135,12 @@ a {
   opacity: 0;
   left: 0;
 }
+.dropDrop {
+  display: flex !important;
+}
+.dropStyle svg {
+  transform: rotate(180deg);
+}
 @media screen and (max-width: 750px) {
   .box {
     padding: 0 2.5rem;
@@ -146,7 +152,6 @@ a {
 .faq1Box,
 .faq2Box,
 .faq3Box,
-.faq4Box
-{
+.faq4Box {
   display: none;
 }

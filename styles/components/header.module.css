@@ -34,6 +34,9 @@
   text-decoration: none;
   position: relative;
 }
+.headerTextBox a svg {
+  transition: 0.5s;
+}
 .headerTextBox a::before {
   content: "";
   width: 0%;
@@ -72,9 +75,9 @@
   padding: 1.5rem;
   backdrop-filter: blur(10px);
 }
-.headerTextBox button:focus-within > .dropBox {
+/* .headerTextBox button:focus > .dropBox {
   display: flex;
-}
+} */
 .dropBox a:nth-child(1) {
   margin: 0 0 1.5rem 0;
 }
