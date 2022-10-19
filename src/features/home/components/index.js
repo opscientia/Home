@@ -1,0 +1,7 @@
+export * from './hero'
+export * from './about'
+export * from './join'
+export * from './donate'
+export * from './testmonial'
+export * from './sponcers'
+export * from './subscribe'

@@ -1,0 +1,1 @@
+export { default as MobileDialog } from './mobileDialog'

@@ -1,0 +1,1 @@
+export { default as Sponcers } from './sponcers'
