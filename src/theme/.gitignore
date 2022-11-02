@@ -28,18 +28,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
-# production env files
-.env.production
-
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-.idea
+next-env.d.ts
 
-# Sentry
-.sentryclirc
-
-# Waypoint
-.wpoutputs/
+.env.local
