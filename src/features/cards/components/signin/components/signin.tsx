@@ -62,7 +62,8 @@ function SigninCard() {
             component={Form}
             autoComplete="off"
             noValidate
-            onSubmit={handleSubmit}>
+            onSubmit={handleSubmit}
+          >
             <InputBase placeholder="Username" {...getFieldProps("userName")} />
             <Stack className="forget-pass">
               <InputBase
@@ -81,27 +82,32 @@ function SigninCard() {
             <LoadingButton
               type="submit"
               variant="contained"
-              className="btn-signin">
+              className="btn-signin"
+            >
               Sign in
             </LoadingButton>
             <Button
               sx={{ textTransform: "capitalize", fontFamily: "'Exo 2'" }}
               variant="holo"
-              startIcon={<IconUrl path="holo" />}>
+              startIcon={<IconUrl path="holo" />}
+            >
               Continue with Holo
             </Button>
-            <Button
-              sx={{
-                textTransform: "capitalize",
-                fontFamily: "'Exo 2'",
-                backgroundColor: "success.main",
-                borderColor: "success.main",
-                ":hover": { backgroundColor: "success.main" },
-              }}
-              variant="holo"
-              startIcon={<IconUrl path="holo" />}>
-              Continue with ORCID
-            </Button>
+            <Link href="/api/orcid">
+              <Button
+                sx={{
+                  textTransform: "capitalize",
+                  fontFamily: "'Exo 2'",
+                  backgroundColor: "success.main",
+                  borderColor: "success.main",
+                  ":hover": { backgroundColor: "success.main" },
+                }}
+                variant="holo"
+                startIcon={<IconUrl path="holo" />}
+              >
+                Continue with ORCID
+              </Button>
+            </Link>
           </Stack>
         </FormikProvider>
         <Stack className="register" spacing={0.7} mt={4}>
