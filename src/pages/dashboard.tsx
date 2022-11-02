@@ -11,7 +11,7 @@ function Dashboard({ username, orcid, records }) {
 
   const logout = () => {
     removeCookies("token");
-    router.replace("/login");
+    router.replace("/auth/signin");
   };
 
   return (
@@ -60,7 +60,7 @@ export async function getServerSideProps({ req, res }) {
     if (!obj)
       return {
         redirect: {
-          destination: "/login",
+          destination: "/auth/signin",
         },
       };
     return {
@@ -75,7 +75,7 @@ export async function getServerSideProps({ req, res }) {
     removeCookies("token", { req, res });
     return {
       redirect: {
-        destination: "/login",
+        destination: "/auth/signin",
       },
     };
   }

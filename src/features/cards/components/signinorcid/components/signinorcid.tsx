@@ -16,12 +16,15 @@ function SigninOrcidCard() {
         </Box>
 
         <Stack spacing={3}>
-          <Button
-            variant="contained"
-            color="success"
-            startIcon={<IconUrl path="id" />}>
-            Continue with ORCID
-          </Button>
+          <Link href="/api/orcid">
+            <Button
+              variant="contained"
+              color="success"
+              startIcon={<IconUrl path="id" />}
+            >
+              Continue with ORCID
+            </Button>
+          </Link>
           <Box sx={{ display: "flex" }}>
             <ErrorIcon className="errorIcon" />
             <Typography variant="body2" sx={{ mx: 1 }}>

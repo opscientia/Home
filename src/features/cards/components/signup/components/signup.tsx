@@ -67,7 +67,8 @@ function SigninCard() {
             autoComplete="off"
             noValidate
             onSubmit={handleSubmit}
-            spacing={3}>
+            spacing={3}
+          >
             <InputBase placeholder="Username" {...getFieldProps("userName")} />
             <InputBase
               type="email"
@@ -82,7 +83,8 @@ function SigninCard() {
               endAdornment={
                 <IconButton
                   size="small"
-                  onClick={() => showPassword("showPass")}>
+                  onClick={() => showPassword("showPass")}
+                >
                   <VisibilityIcon
                     {...(state.showPass && { color: "primary" })}
                   />
@@ -97,7 +99,8 @@ function SigninCard() {
               endAdornment={
                 <IconButton
                   size="small"
-                  onClick={() => showPassword("showRePass")}>
+                  onClick={() => showPassword("showRePass")}
+                >
                   <VisibilityIcon
                     {...(state.showRePass && { color: "primary" })}
                   />
@@ -118,27 +121,32 @@ function SigninCard() {
             <LoadingButton
               type="submit"
               variant="contained"
-              className="btn-signin">
+              className="btn-signin"
+            >
               Sign up
             </LoadingButton>
             <Button
               sx={{ textTransform: "capitalize", fontFamily: "'Exo 2'" }}
               variant="holo"
-              startIcon={<IconUrl path="holo" />}>
+              startIcon={<IconUrl path="holo" />}
+            >
               Continue with Holo
             </Button>
-            <Button
-              sx={{
-                textTransform: "capitalize",
-                fontFamily: "'Exo 2'",
-                backgroundColor: "success.main",
-                borderColor: "success.main",
-                ":hover": { backgroundColor: "success.main" },
-              }}
-              variant="holo"
-              startIcon={<IconUrl path="holo" />}>
-              Continue with ORCID
-            </Button>
+            <Link href="/api/orcid">
+              <Button
+                sx={{
+                  textTransform: "capitalize",
+                  fontFamily: "'Exo 2'",
+                  backgroundColor: "success.main",
+                  borderColor: "success.main",
+                  ":hover": { backgroundColor: "success.main" },
+                }}
+                variant="holo"
+                startIcon={<IconUrl path="holo" />}
+              >
+                Continue with ORCID
+              </Button>
+            </Link>
           </Stack>
         </FormikProvider>
         <Stack className="register" spacing={0.7} mt={4}>
