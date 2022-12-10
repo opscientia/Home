@@ -4,9 +4,6 @@
 
 OpSci society is an ecosystem built on three components: 1) Identity & Reputation, 2) Scholarship & Research, and 3) Publishing and Discovery. Each of these components is built on an underlying protocol or platform, Verse, Fellowship, and Commons.
 
-![](https://i.imgur.com/yIjXDae.jpg)
-
-
 ### OpSci Verse
 
 The first decentralized identity directory that links off-chain academic credentials on-chain for DeSci dApps. OpSci Verse empowers researchers to create a portable account for web-native scientists that can be used to interact with any DeSci web application. Choose to be pseudonymous or not. Control how you present your scientific persona online. Prove your credentials while remaining private.
@@ -32,3 +29,6 @@ npm run build
 
 npm run dev
 ```
+#### Contact
+
+Email: dev@opscientia.com
