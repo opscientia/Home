@@ -3,8 +3,12 @@ import TestmonialStyled from "./overrides/testmonialStyle";
 import Iframe from "react-iframe";
 import { Box, Typography, Button, Stack, Grid } from "@mui/material";
 import { Container } from "@mui/material";
-import { TestmonialCard } from "@features/cards";
+import { TestmonialCard, TestmonialCard1, TestmonialCard3, TestmonialCard4, TestmonialCard2} from "@features/cards";
+import { TwitterTweetEmbed} from 'react-twitter-embed';
+import styles from "../../../../styles/Home.module.css"
+
 import Slider from "react-slick";
+import { StylesContext } from "@mui/styles";
 const settings = {
   dots: true,
   infinite: true,
@@ -20,21 +24,19 @@ function Testmonial() {
     <TestmonialStyled component="section">
       <Grid container spacing={4}>
         <Grid item md={6} xs={12}>
-          <Iframe
-            url="https://publish.twitter.com/?maxheight=400&amp;maxwidth=600&amp;query=%40opscientia&amp;theme=dark&amp;widget=Timeline"
-            width="100%"
-            height="300px"
-            display="initial"
-            position="relative"
+        <div className={styles.twitterFeedStyle}>
+            <TwitterTweetEmbed 
+            tweetId={'1600878691776544768'}
           />
+          </div>
         </Grid>
         <Grid item md={6} xs={12}>
           <Slider {...settings}>
             <TestmonialCard />
-            <TestmonialCard />
-            <TestmonialCard />
-            <TestmonialCard />
-            <TestmonialCard />
+            <TestmonialCard1/>
+            <TestmonialCard2 />
+            <TestmonialCard3 />
+            <TestmonialCard4 />
           </Slider>
         </Grid>
       </Grid>

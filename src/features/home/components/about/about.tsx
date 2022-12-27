@@ -3,6 +3,8 @@ import AboutStyled from "./overrides/aboutStyle";
 import { Container, Stack, Box, Typography, Grid, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import useWindowSize from "@hooks/windowResize";
+import styles from "../../../../styles/Home.module.css";
+import {Link} from "react-scroll";
 function About() {
   const navigate = useRouter();
   const [offSetLeft, setOffSetLeft] = React.useState(0);
@@ -12,6 +14,7 @@ function About() {
     setOffSetLeft(left.current.getBoundingClientRect().left);
   }, [windowSize]);
   return (
+    <div id="about">
     <AboutStyled component="section" widthoffset={offSetLeft}>
       <Container>
         <Grid container spacing={3}>
@@ -42,12 +45,18 @@ function About() {
                   onClick={() => navigate.push("/about")}>
                   Apply
                 </Button>
+                <Link activeClass="active" to="ecosystem" spy={true} smooth={true} offset={-70} duration={500}>
+                <Button className={styles.learnMorebtn}>
+                  Learn More
+                </Button>
+                </Link>
               </Box>
             </Stack>
           </Grid>
         </Grid>
       </Container>
     </AboutStyled>
+    </div>
   );
 }
 

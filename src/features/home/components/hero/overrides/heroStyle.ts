@@ -36,6 +36,7 @@ const HeroStyled = styled(Box)(({ theme }) => ({
   "& .hero-btn": {
     fontFamily: "'Exo 2'",
   },
+  
 }));
 
 export default HeroStyled;

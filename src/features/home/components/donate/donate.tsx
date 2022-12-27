@@ -103,6 +103,8 @@ function Donate() {
           {Array.from({ length: 6 }).map((_, idx) => (
             <Box px={1} key={idx}>
               <DonateCard />
+              {/* <DonateCard1 />
+              <DonateCard2 /> */}
             </Box>
           ))}
         </Slider>

@@ -16,7 +16,7 @@ import ReactCardFlip from "react-card-flip";
 import { useTheme, alpha } from "@mui/material/styles";
 const img = "/static/images/avatar.png";
 
-function DonateCard() {
+function DonateCard2() {
   const theme = useTheme();
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlipped = (e) => {
@@ -381,4 +381,4 @@ function DonateCard() {
   );
 }
 
-export default DonateCard;
+export default DonateCard2;

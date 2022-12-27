@@ -1,8 +1,9 @@
 import React from "react";
 import TestmonialStyled from "./overrides/testmonialStyle";
+
 import { Typography, CardContent, Box } from "@mui/material";
 import Icon from "@utils/Icon";
-function DonateCard() {
+function DonateCard2() {
   return (
     <TestmonialStyled>
       <CardContent>
@@ -10,7 +11,7 @@ function DonateCard() {
           <Icon path="comas" />
         </Box>
         <Typography variant="h5" fontWeight={400} mt={4} gutterBottom>
-          “It is exactly what science needs. Fair opportunities and rightful ownership of research. Allows us to truly own our identities on the internet. Researchers receive their fair share and move away from the pay-to-publish business model.”
+          “Funding schemes and how the publish-or-perish cycle gets us trapped in salami-slicing results. Also, the publishing industry hijacking the Open Access philosophy for their own profit”
         </Typography>
         {/* <Typography
           align="center"
@@ -25,4 +26,4 @@ function DonateCard() {
   );
 }
 
-export default DonateCard;
+export default DonateCard2;

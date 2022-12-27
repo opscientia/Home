@@ -34,6 +34,15 @@ function OpSciCard({ data }) {
         <CardActions sx={{ justifyContent: "center", mt: 3 }}>
           <Button className="card-btn">{data.action}</Button>
         </CardActions>
+        <Typography
+          variant="subtitle1"
+          fontFamily="'Exo 2'"
+          fontStyle="italic"
+          fontWeight={200}
+          textAlign="center"
+        >
+          {data.comment}
+        </Typography>
       </CardContent>
     </OpsciStyled>
   );

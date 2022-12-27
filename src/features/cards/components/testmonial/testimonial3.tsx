@@ -1,8 +1,9 @@
 import React from "react";
 import TestmonialStyled from "./overrides/testmonialStyle";
+
 import { Typography, CardContent, Box } from "@mui/material";
 import Icon from "@utils/Icon";
-function DonateCard() {
+function DonateCard3() {
   return (
     <TestmonialStyled>
       <CardContent>
@@ -10,7 +11,7 @@ function DonateCard() {
           <Icon path="comas" />
         </Box>
         <Typography variant="h5" fontWeight={400} mt={4} gutterBottom>
-          “It is exactly what science needs. Fair opportunities and rightful ownership of research. Allows us to truly own our identities on the internet. Researchers receive their fair share and move away from the pay-to-publish business model.”
+          “I'm at the beginning of my DeSci career and as an orthopedic surgeon i would like to integrate the Web3 world and technology into my profession.”
         </Typography>
         {/* <Typography
           align="center"
@@ -25,4 +26,4 @@ function DonateCard() {
   );
 }
 
-export default DonateCard;
+export default DonateCard3;
