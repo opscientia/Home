@@ -57,30 +57,26 @@ export const buttons = [
 export const navicon = [
   {
     name: "med",
-    path: "/",
+    path: "https://medium.com/opscientia-dao",
   },
   {
     name: "git",
-    path: "/",
+    path: "https://github.com/opscientia",
   },
   {
     name: "dor",
-    path: "/",
+    path: "https://discord.gg/n7UBwrGywZ",
   },
   {
     name: "twi",
-    path: "/",
+    path: "https://www.twitter.com/opscientia",
   },
   {
     name: "you",
-    path: "/",
+    path: "https://youtu.be/mSMsDobOOAE",
   },
   {
     name: "Layer 2",
     path: "/",
   },
-  //   {
-  //     name: "bell",
-  //     path: "/",
-  //   },
 ];
