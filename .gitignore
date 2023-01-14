@@ -43,3 +43,7 @@ yarn-error.log*
 
 # Waypoint
 .wpoutputs/
+
+#lock files
+.lock
+package-lock.json
