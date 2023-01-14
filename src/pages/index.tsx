@@ -4,7 +4,6 @@ import React from "react";
 import {
   Hero,
   About,
-  Join,
   Donate,
   Testmonial,
   Sponcers,
@@ -16,7 +15,7 @@ import { MainLayout } from "@features/layouts";
 const opsicarddata = [
   {
     icon: "/static/icons/Vector (3).svg",
-    title: "OpSci Verse",
+    title: "Verse",
     description:
       "A portable account for web-native scientists that can be used to interact with any DeSci web application. Choose to be pseudonymous or not. Control how you present your scientific persona online. Prove your credentials while remaining private.",
     action: "CLAIM YOUR PROFILE",
@@ -27,8 +26,8 @@ const opsicarddata = [
     title: "Fellowship & Research",
     description:
       "The OpSci dWeb Fellowship is a 12-week program that provides a stipend for talented undergraduates, students, and post-doctoral scholars to work on open source software development and basic research that aligns with the Opscientia mission.",
-    action: "BECOME A FELLOW",
-    href: "/",
+    action: "*coming soon",
+    href: "#",
   },
   {
     icon: "/static/icons/science.svg",
@@ -81,7 +80,6 @@ export default function Home() {
           </Grid>
         </Container>
       </Box>
-      <Join />
       <Box>
         <Testmonial />
       </Box>

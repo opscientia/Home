@@ -46,7 +46,8 @@ function Testmonial() {
                 Are you a <span className="scie">scientist</span>?
               </Typography>
               <Typography variant="h5" fontWeight="400" fontFamily="'Epilogue'">
-                Contribute to the conversation
+                Make your voice heard and contribute to the conversation on open
+                science{" "}
               </Typography>
 
               <Box my={2}>

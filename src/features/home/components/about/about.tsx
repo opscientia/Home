@@ -39,8 +39,8 @@ function About() {
               <Box mt={2}>
                 <Button
                   className="about-btn"
-                  onClick={() => navigate.push("/about")}>
-                  Apply
+                  onClick={() => navigate.push("/ecosystem")}>
+                  Learn more
                 </Button>
               </Box>
             </Stack>

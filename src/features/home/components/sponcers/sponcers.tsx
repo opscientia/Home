@@ -24,7 +24,7 @@ function Sponcers() {
       </Box>
 
       <Box className="sponsor-container" px={3}>
-        <Marquee speed={180} gradient={false}>
+        <Marquee speed={50} gradient={false}>
           <Box
             sx={{ mx: 5 }}
             component="img"
