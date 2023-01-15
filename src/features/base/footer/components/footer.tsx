@@ -53,13 +53,16 @@ function Footer() {
           <Grid item xs={12} sm={7}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
+                
+              
+          
                 <Stack
                   direction="row"
                   mt={3}
                   justifyContent="space-between"
                   className="nav-links"
                 >
-                  <List>
+                  {/* <List>
                     {nav1.map((item, i) => (
                       <ListItem key={item.name}>
                         <ListItemButton>
@@ -90,36 +93,8 @@ function Footer() {
                         </ListItemButton>
                       </ListItem>
                     ))}
-                  </List>
-                </Stack>
-              </Grid>
-              <Grid item md={3} sm={6} xs={12} ml="auto">
-                <Stack
-                  direction={{ xs: "row", sm: "column" }}
-                  justifyContent={{ xs: "center" }}
-                  spacing={2}
-                  mt={5}
-                >
-                  {buttons.map((item) => (
-                    <Button key={item.name} className="footer-btn">
-                      {item.name}
-                    </Button>
-                  ))}
-                </Stack>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Box mt={11}>
-          <Grid
-            container
-            direction="row-reverse"
-            justifyContent="center"
-            alignItems="center"
-            spacing={3}
-          >
-            <Grid item xs={12} md={7} sm={12}>
-              <Stack
+                  </List> */}
+                                <Stack
                 direction={{ sm: "row", xs: "column" }}
                 justifyContent={{ sm: "center" }}
                 spacing={2}
@@ -142,7 +117,48 @@ function Footer() {
                     </a>
                   ))}
                 </Stack>
-              </Stack>
+                </Stack>
+                  
+                </Stack>
+                
+              </Grid>
+             
+            </Grid>
+          </Grid>
+        </Grid>
+        <Box mt={11}>
+          <Grid
+            container
+            direction="row-reverse"
+            justifyContent="center"
+            alignItems="center"
+            spacing={3}
+          >
+            <Grid item xs={12} md={7} sm={12}>
+              {/* <Stack
+                direction={{ sm: "row", xs: "column" }}
+                justifyContent={{ sm: "center" }}
+                spacing={2}
+                alignItems="center"
+              >
+                <Typography
+                  variant="body2"
+                  textTransform="uppercase"
+                  fontFamily="'Exo 2'"
+                  fontWeight={500}
+                >
+                  CONNECT WITH US
+                </Typography>
+                <Stack direction="row" spacing={{ xs: 1, sm: 2 }}>
+                  {navicon.map((item) => (
+                    <a href={item.path}>
+                      <IconButton className="btn-icon" key={item.name}>
+                        <Icon path={item.name} />
+                      </IconButton>
+                    </a>
+                  ))}
+                </Stack>
+              </Stack> */}
             </Grid>
             <Grid item xs={12} sm={5}>
               <Stack alignItems={{ xs: "center", sm: "start" }}>
