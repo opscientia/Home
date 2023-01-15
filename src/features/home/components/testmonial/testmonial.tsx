@@ -66,6 +66,11 @@ function Testmonial() {
                 "It is exactly what science needs. Fair opportunities and rightful ownership of research. Allows us to truly own our identities on the internet. Researchers receive their fair share and move away from the pay-to-publish business model."
               }
             />
+             <TestmonialCard
+              data={
+                "Absolutely wonderful. I can't wait to share this concept of DeSci with the researchers at my current university."
+              }
+            />
           </Slider>
         </Grid>
       </Grid>
