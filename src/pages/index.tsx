@@ -19,7 +19,7 @@ const opsicarddata = [
     description:
       "A portable account for web-native scientists that can be used to interact with any DeSci web application. Choose to be pseudonymous or not. Control how you present your scientific persona online. Prove your credentials while remaining private.",
     action: "CLAIM YOUR PROFILE",
-    href: "https://www.holonym.id/",
+    href: "https://form.typeform.com/to/cC0QmNuC",
   },
   {
     icon: "/static/icons/Research.svg",
