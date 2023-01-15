@@ -30,7 +30,7 @@ function Testmonial() {
   return (
     <TestmonialStyled component="section">
       <Grid container spacing={4}>
-        <Grid item   md={6} xs={12} pl={10}>
+        <Grid item   md={6} xs={12}>
         
           <a
             className="twitter-timeline"
