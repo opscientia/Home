@@ -68,10 +68,10 @@ function Hero() {
                   fontWeight={300}>
                     Applications Open Soon
                 </Typography>
-                <Box my={2}>
+                {/* <Box my={2}>
                   {" "}
                   <Button className="hero-btn">EXPLORE</Button>
-                </Box>
+                </Box> */}
               </Box>
             </Box>
           </Grid>

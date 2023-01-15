@@ -19,7 +19,7 @@ const opsicarddata = [
     description:
       "A portable account for web-native scientists that can be used to interact with any DeSci web application. Choose to be pseudonymous or not. Control how you present your scientific persona online. Prove your credentials while remaining private.",
     action: "CLAIM YOUR PROFILE",
-    href: "/",
+    href: "https://www.holonym.id/",
   },
   {
     icon: "/static/icons/Research.svg",
@@ -35,7 +35,7 @@ const opsicarddata = [
     description:
       "Commons is a free, open-access platform for publishing and discovering large scientific datasets, computational workflows, and digital laboratory notebooks. Knowledge artifacts are permanently archived on decentralized storage networks.",
     action: "DISCOVER & PUBLISH",
-    href: "/",
+    href: "https://commons.opsci.io/",
   },
 ];
 
@@ -69,7 +69,8 @@ export default function Home() {
             backgroundSize: "cover",
             height: "auto",
           },
-        }}>
+        }}
+      >
         <Container>
           <Grid container justifyContent="center" spacing={3}>
             {opsicarddata.map((card, index) => (
@@ -84,7 +85,8 @@ export default function Home() {
         <Testmonial />
       </Box>
       <Sponcers />
-      <Subscribe />
+     
+      {/* <Subscribe /> */}
     </div>
   );
 }

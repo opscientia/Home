@@ -1,7 +1,8 @@
 import React from "react";
-import connect from "src/lib/database";
-import Subscriber from "src/models/Subscriber";
+// import connect from "src/lib/database";
+// import Subscriber from "src/models/Subscriber";
 import SubscribeStyled from "./overrides/subscribeStyle";
+
 import {
   Stack,
   Box,
@@ -26,23 +27,18 @@ function Sponcers() {
     setOffSetLeft(left.current.getBoundingClientRect().left);
   }, [windowSize]);
 
-  const [
-    isSuccessfullySubmitted,
-    setIsSuccessfullySubmitted,
-  ] = React.useState(false);
+  const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] =
+    React.useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState
-  } = useForm<Inputs>();
+  const { register, handleSubmit, watch, formState } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsSuccessfullySubmitted(true);
-    await connect();
-    const newSubscriber = new Subscriber({ email: data.email});
-    await newSubscriber.save();
-    console.log(data)};
+    // const newSubscriber = new Subscriber({ email: data.email });
+    // await newSubscriber.save();
+    console.log(data);
+  };
+
+  
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -96,8 +92,8 @@ function Sponcers() {
                     </Button>
                   </Box>
                   {formState.isSubmitted && (
-    <div className="success">Thank you for subscribing !</div>
-  )}
+                    <div className="success">Thank you for subscribing !</div>
+                  )}
                 </Stack>
               </Grid>
             </Grid>

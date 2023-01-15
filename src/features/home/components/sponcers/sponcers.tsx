@@ -38,7 +38,7 @@ function Sponcers() {
           <Box
             sx={{ mx: 5 }}
             component="img"
-            src="/static/icons/Protocol Labs.svg"
+            src="/static/icons/pl.svg"
           />
           <Box
             sx={{ mx: 5 }}

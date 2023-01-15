@@ -118,12 +118,12 @@ function Donate() {
             direction: "row-reverse",
             mt: 3,
           }}>
-          <Button
+          {/* <Button
             sx={{ mt: 2, mx: 1, fontFamily: "'Exo 2'" }}
             size="small"
             variant="contained">
             Learn More
-          </Button>
+          </Button> */}
           <Button
             sx={{
               mx: 1,

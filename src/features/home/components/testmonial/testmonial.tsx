@@ -30,8 +30,7 @@ function Testmonial() {
   return (
     <TestmonialStyled component="section">
       <Grid container spacing={4}>
-        <Grid item   md={6} xs={12}>
-        
+        <Grid item md={6} xs={12}>
           <a
             className="twitter-timeline"
             data-height="300"
@@ -95,9 +94,11 @@ function Testmonial() {
               </Typography>
 
               <Box my={2}>
-                <Button variant="contained" className="testimonial-btn">
-                  CLICK HERE
-                </Button>
+                <a href="https://form.typeform.com/to/cC0QmNuC">
+                  <Button variant="contained" className="testimonial-btn">
+                    CLICK HERE
+                  </Button>
+                </a>
               </Box>
               <Box my={2}>
                 <img src="static/images/Line 1.png" alt="aa" />
