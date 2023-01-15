@@ -38,7 +38,8 @@ function Footer() {
                 variant="h5"
                 textTransform="uppercase"
                 fontFamily="'Exo 2'"
-                fontWeight={500}>
+                fontWeight={500}
+              >
                 The Open Science Decentralized Autonomous Organization
               </Typography>
               <Stack direction="row" mt={3} spacing={2}>
@@ -56,7 +57,8 @@ function Footer() {
                   direction="row"
                   mt={3}
                   justifyContent="space-between"
-                  className="nav-links">
+                  className="nav-links"
+                >
                   <List>
                     {nav1.map((item, i) => (
                       <ListItem key={item.name}>
@@ -65,7 +67,8 @@ function Footer() {
                             variant="body1"
                             fontFamily="'Exo 2'"
                             color={i === 0 ? "primary" : "text.secondary"}
-                            fontWeight={i === 0 ? "600" : "500"}>
+                            fontWeight={i === 0 ? "600" : "500"}
+                          >
                             {item.name}
                           </Typography>
                         </ListItemButton>
@@ -80,7 +83,8 @@ function Footer() {
                             variant="body1"
                             fontFamily="'Exo 2'"
                             color={i === 0 ? "primary" : "text.secondary"}
-                            fontWeight={i === 0 ? "600" : "500"}>
+                            fontWeight={i === 0 ? "600" : "500"}
+                          >
                             {item.name}
                           </Typography>
                         </ListItemButton>
@@ -94,7 +98,8 @@ function Footer() {
                   direction={{ xs: "row", sm: "column" }}
                   justifyContent={{ xs: "center" }}
                   spacing={2}
-                  mt={5}>
+                  mt={5}
+                >
                   {buttons.map((item) => (
                     <Button key={item.name} className="footer-btn">
                       {item.name}
@@ -111,25 +116,30 @@ function Footer() {
             direction="row-reverse"
             justifyContent="center"
             alignItems="center"
-            spacing={3}>
+            spacing={3}
+          >
             <Grid item xs={12} md={7} sm={12}>
               <Stack
                 direction={{ sm: "row", xs: "column" }}
                 justifyContent={{ sm: "center" }}
                 spacing={2}
-                alignItems="center">
+                alignItems="center"
+              >
                 <Typography
                   variant="body2"
                   textTransform="uppercase"
                   fontFamily="'Exo 2'"
-                  fontWeight={500}>
+                  fontWeight={500}
+                >
                   CONNECT WITH US
                 </Typography>
                 <Stack direction="row" spacing={{ xs: 1, sm: 2 }}>
                   {navicon.map((item) => (
-                    <IconButton className="btn-icon" key={item.name}>
-                      <Icon path={item.name} />
-                    </IconButton>
+                    <a href={item.path}>
+                      <IconButton className="btn-icon" key={item.name}>
+                        <Icon path={item.name} />
+                      </IconButton>
+                    </a>
                   ))}
                 </Stack>
               </Stack>
