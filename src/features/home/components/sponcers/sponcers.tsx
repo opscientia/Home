@@ -24,56 +24,11 @@ function Sponcers() {
       </Box>
 
       <Box className="sponsor-container" px={3}>
-        <Marquee speed={50} gradient={false}>
+        <Marquee speed={180} gradient={false}>
           <Box
             sx={{ mx: 5 }}
             component="img"
             src="/static/icons/Filecoin.svg"
-          />
-           <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Gitcoin.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Protocol Labs.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Desci World.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Fleming.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Active Inference Lab.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Foresight.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Kernel.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Lab DAO.svg"
-          />
-          <Box
-            sx={{ mx: 5 }}
-            component="img"
-            src="/static/icons/Web3 Women.svg"
           />
           <Box
             sx={{ mx: 5 }}
