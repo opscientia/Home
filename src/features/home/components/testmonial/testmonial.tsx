@@ -30,14 +30,22 @@ function Testmonial() {
   return (
     <TestmonialStyled component="section">
       <Grid container spacing={4}>
-        <Grid item md={6} xs={12}>
-          <Iframe
-            url="https://publish.twitter.com/?maxheight=400&amp;maxwidth=600&amp;query=%40opscientia&amp;theme=dark&amp;widget=Timeline"
-            width="100%"
-            height="300px"
-            display="initial"
-            position="relative"
-          />
+        <Grid item   md={6} xs={12} pl={10}>
+        
+          <a
+            className="twitter-timeline"
+            data-height="300"
+            data-dnt="true"
+            data-theme="dark"
+            href="https://twitter.com/opscientia?ref_src=twsrc%5Etfw"
+          >
+            Tweets by opscientia
+          </a>{" "}
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charSet="utf-8"
+          ></script>
         </Grid>
         <Grid item md={6} xs={12}>
           <Slider {...settings}>
@@ -66,7 +74,7 @@ function Testmonial() {
                 "It is exactly what science needs. Fair opportunities and rightful ownership of research. Allows us to truly own our identities on the internet. Researchers receive their fair share and move away from the pay-to-publish business model."
               }
             />
-             <TestmonialCard
+            <TestmonialCard
               data={
                 "Absolutely wonderful. I can't wait to share this concept of DeSci with the researchers at my current university."
               }

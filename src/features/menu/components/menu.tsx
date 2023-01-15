@@ -55,7 +55,7 @@ export default function Menu({ menu }) {
             {item.children && (
               <Collapse
                 sx={{
-                  minWidth: { xs: 0, md: item.title === "dApps" ? 500 : 0 },
+                  minWidth: { xs: 0, md: item.title === "dApps" ? 200 : 0 },
                 }}
                 in={item.title === collapse}
                 timeout="auto"
@@ -67,7 +67,7 @@ export default function Menu({ menu }) {
                     display: "grid",
                     gridTemplateRows:
                       item.title === "dApps"
-                        ? "repeat(3,minmax(0,1fr))"
+                        ? "repeat(4,minmax(0,1fr))"
                         : "repeat(1,minmax(0,1fr))",
                     gridAutoFlow: {
                       xs: "row",
