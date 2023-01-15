@@ -37,11 +37,11 @@ function About() {
               </Typography>
 
               <Box mt={2}>
-                {/* <Button
+                <Button
                   className="about-btn"
-                  onClick={() => navigate.push("/ecosystem")}>
-                  Learn more
-                </Button> */}
+                  onClick={() => navigate.push("http://verse.opsci.io/")}>
+                  Apply
+                </Button>
               </Box>
             </Stack>
           </Grid>

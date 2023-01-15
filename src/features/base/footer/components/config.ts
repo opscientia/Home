@@ -75,8 +75,5 @@ export const navicon = [
     name: "you",
     path: "https://youtu.be/mSMsDobOOAE",
   },
-  {
-    name: "Layer 2",
-    path: "/",
-  },
+  
 ];

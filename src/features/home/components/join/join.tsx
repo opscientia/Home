@@ -37,6 +37,9 @@ function Join() {
           </Typography>
         </Box>
 
+<a href="http://verse.opsci.io/">
+
+</a>
         <Button className="join-btn">APPLY FOR MEMBERSHIP</Button>
       </Container>
     </JoinStyled>
