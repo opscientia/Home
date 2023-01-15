@@ -57,10 +57,12 @@ function Hero() {
                   variant="h5"
                   fontFamily="'Epilogue'"
                   fontWeight={400}>
-                  A professional society for high impact scientists with verified open science activity.Link academic credentials, mint a unique profile, publish openly, and receive rewards."
+                  A professional society for high impact scientists with verified open science activity.
+                  Link academic credentials, mint a unique profile, publish openly, and receive rewards.
                 </Typography>
                 <Typography
                   variant="h5"
+                  marginTop={2}
                   fontFamily="'Epilogue'"
                   fontStyle={'italic'}
                   fontWeight={300}>
