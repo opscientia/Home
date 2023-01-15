@@ -2,7 +2,7 @@ import mongoose, { ConnectOptions } from "mongoose";
 
 const connect = () => {
   mongoose.connect(
-    process.env.MONGODB_URI,
+    'mongodb+srv://test:test@cluster0-test.qgvzkzr.mongodb.net/test',
     { useNewUrlParser: true, useUnifiedTopology: true } as ConnectOptions,
     (err) => {
       if (err) console.log("Error connecting to MongoDB");

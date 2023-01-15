@@ -1,4 +1,6 @@
 import React from "react";
+import connect from "src/lib/database";
+import Subscriber from "src/models/Subscriber";
 import SubscribeStyled from "./overrides/subscribeStyle";
 import {
   Stack,
@@ -35,9 +37,11 @@ function Sponcers() {
     watch,
     formState
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsSuccessfullySubmitted(true);
-
+    await connect();
+    const newSubscriber = new Subscriber({ email: data.email});
+    await newSubscriber.save();
     console.log(data)};
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>

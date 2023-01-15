@@ -83,7 +83,6 @@ export default function Home() {
       <Box>
         <Testmonial />
       </Box>
-      <Donate />
       <Sponcers />
       <Subscribe />
     </div>
