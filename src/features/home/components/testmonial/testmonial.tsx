@@ -85,7 +85,7 @@ function Testmonial() {
         <Container>
           <Stack direction="column" spacing={4}>
             <Box className="contribute" pt={5} fontWeight={400}>
-              <Typography variant="h1" fontFamily="'Exo 2'" fontWeight={500}>
+              {/* <Typography variant="h1" fontFamily="'Exo 2'" fontWeight={500}>
                 Are you a <span className="scie">scientist</span>?
               </Typography>
               <Typography variant="h5" fontWeight="400" fontFamily="'Epilogue'">
@@ -99,7 +99,7 @@ function Testmonial() {
                     CLICK HERE
                   </Button>
                 </a>
-              </Box>
+              </Box> */}
               <Box my={2}>
                 <img src="static/images/Line 1.png" alt="aa" />
               </Box>
