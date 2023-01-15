@@ -1,5 +1,7 @@
 # OpSci Society Home Page
 
+![OpSci-Banner](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/493b70dc-7fa1-4bee-ba3c-653957699432/gitcoin_banner-02.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230115T074152Z&X-Amz-Expires=86400&X-Amz-Signature=4738c3ea19b5398b92f380483366301c8ffefcbd8cee1880860c4e935bd16810&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22gitcoin%2520banner-02.png%22&x-id=GetObject)
+
 ## Intro to OpSci Society
 
 OpSci society is an ecosystem built on three components: 1) Identity & Reputation, 2) Scholarship & Research, and 3) Publishing and Discovery. Each of these components is built on an underlying protocol or platform, Verse, Fellowship, and Commons.
