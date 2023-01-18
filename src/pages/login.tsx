@@ -23,7 +23,7 @@ export default function Signin() {
       }}
       alignItems="center"
       justifyContent="center">
-      <SigninCard />
+        coming soon
     </Stack>
   );
 }
@@ -35,7 +35,7 @@ export async function getServerSideProps({ req, res }) {
   try {
     const cookieExists = getCookie("token", { req, res });
     console.log("cookie Exists:" + cookieExists);
-    if (cookieExists) return { redirect: { destination: "/dashboard" } };
+    if (cookieExists) return { redirect: { destination: "/account" } };
     return { props: {} };
   } catch (err) {
     return { props: {} };

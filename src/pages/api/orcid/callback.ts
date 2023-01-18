@@ -16,6 +16,6 @@ export default async function (req, res, next) {
       req,
       res,
     });
-    res.redirect("/dashboard");
+    res.redirect("/account");
   })(req, res, next);
 }
