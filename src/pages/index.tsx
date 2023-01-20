@@ -86,7 +86,7 @@ export default function Home() {
       </Box>
       <Sponcers />
      
-      {/* <Subscribe /> */}
+      <Subscribe />
     </div>
   );
 }
