@@ -2,7 +2,6 @@ import React from "react";
 // import connect from "src/lib/database";
 // import Subscriber from "src/models/Subscriber";
 import SubscribeStyled from "./overrides/subscribeStyle";
-
 import {
   Stack,
   Box,
@@ -38,7 +37,6 @@ function Sponcers() {
     console.log(data);
   };
 
-  
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>
       <form onSubmit={handleSubmit(onSubmit)}>
