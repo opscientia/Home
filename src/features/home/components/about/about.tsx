@@ -9,7 +9,7 @@ function About() {
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
-    setOffSetLeft(left.current.getBoundingClientRect().left);
+    setOffSetLeft(left?.current?.getBoundingClientRect()?.left);
   }, [windowSize]);
   return (
     <AboutStyled component="section" widthoffset={offSetLeft}>

@@ -50,7 +50,7 @@ function Donate() {
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
-    setOffSetLeft(left.current.getBoundingClientRect().left);
+    setOffSetLeft(left?.current?.getBoundingClientRect()?.left);
   }, [windowSize]);
   return (
     <DonateStyled component="section" offsetwidth={offSetLeft}>
