@@ -12,6 +12,9 @@ import {
 import { OpsciCard } from "@features/cards";
 import { Container, Grid, Box, useTheme } from "@mui/material";
 import { MainLayout } from "@features/layouts";
+import { useSelector, useDispatch } from "react-redux";
+import { setIsAuthentic } from "@redux/userSlice";
+import { RootState } from "@redux/Store";
 const opsicarddata = [
   {
     icon: "/static/icons/Vector (3).svg",
@@ -41,6 +44,7 @@ const opsicarddata = [
 
 export default function Home() {
   const theme = useTheme();
+
   return (
     <div>
       <Head>
@@ -85,7 +89,7 @@ export default function Home() {
         <Testmonial />
       </Box>
       <Sponcers />
-     
+
       <Subscribe />
     </div>
   );
@@ -96,8 +100,14 @@ Home.getLayout = function getLayout(page: React.ReactElement) {
 
 export async function getServerSideProps({ req, res }) {
   try {
+    const authCheck = useSelector((state: RootState) => state.user.isAuthentic);
+    const dispatch = useDispatch();
     const cookieExists = getCookie("token", { req, res });
     console.log("cookie Exists:" + cookieExists);
+    if (cookieExists) {
+      dispatch(setIsAuthentic(true));
+    }
+
     return { props: {} }; // set isAuthentic property to true using redux
   } catch (err) {
     return { props: {} };
