@@ -16,7 +16,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   email: string;
 };
-import * as SibApiV3Sdk from 'sib-api-v3-typescript';
 
 function Sponcers() {
   const theme = useTheme();
