@@ -12,7 +12,8 @@ const Strategy = new OrcidStrategy(
     state: false, // remove this if not using sessions
     clientID: process.env.ORCID_CLIENT_ID,
     clientSecret: process.env.ORCID_CLIENT_SECRET,
-    callbackURL: '/api/orcid/callback'
+    callbackURL: '/api/orcid/callback',
+    Proxy:true
   },
   async (accessToken, refreshToken,params, profile, done) => {
     try {
