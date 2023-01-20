@@ -13,7 +13,7 @@ const Strategy = new OrcidStrategy(
     clientID: process.env.ORCID_CLIENT_ID,
     clientSecret: process.env.ORCID_CLIENT_SECRET,
     callbackURL: '/api/orcid/callback',
-    Proxy:true
+    proxy:true
   },
   async (accessToken, refreshToken,params, profile, done) => {
     try {
