@@ -16,10 +16,13 @@ import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   email: string;
 };
+import * as SibApiV3Sdk from 'sib-api-v3-typescript';
 
 function Sponcers() {
   const theme = useTheme();
   const [offSetLeft, setOffSetLeft] = React.useState(0);
+  const [subEmail, setSubEmail] = React.useState(undefined);
+
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
@@ -32,10 +35,37 @@ function Sponcers() {
   const { register, handleSubmit, watch, formState } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsSuccessfullySubmitted(true);
-    // const newSubscriber = new Subscriber({ email: data.email });
-    // await newSubscriber.save();
-    console.log(data);
+    setSubEmail({ "email": data.email});
+    getresponse()
+    console.log(subEmail)
+
   };
+  const apiKey = process.env.SIB;
+  async function postData() {
+    const url = 'https://api.sendinblue.com/v3/contacts'
+    const response = await fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'X-API-KEY': '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'
+        },
+        body: subEmail
+    });
+    
+    const json = await response.json();
+    return json
+ }
+      
+  async function getresponse(){
+    postData()
+    .then(res => {
+            alert(res.body)
+        })
+   }
+  
+
 
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>

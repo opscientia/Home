@@ -98,7 +98,7 @@ export async function getServerSideProps({ req, res }) {
   try {
     const cookieExists = getCookie("token", { req, res });
     console.log("cookie Exists:" + cookieExists);
-    return { props: {} };
+    return { props: {} }; // set isAuthentic property to true using redux
   } catch (err) {
     return { props: {} };
   }
