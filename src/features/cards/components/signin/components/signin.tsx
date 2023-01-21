@@ -13,39 +13,14 @@ import SigninCardStyled from "./overrides/signinCardStyle";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSelector, useDispatch } from "react-redux";
 import { LoadingButton } from "@mui/lab";
 import { useFormik, Form, FormikProvider } from "formik";
 
 function SigninCard() {
   const [show, setShow] = useState(false);
   const showPassword = () => setShow(!show);
-  const dispatch = useDispatch();
   const navigate = useRouter();
-  const { user } = useSelector(userSelector);
-  const formik = useFormik({
-    initialValues: {
-      userName: "",
-      password: "",
-    },
-
-    onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
-      if (
-        user.userName === values.userName &&
-        user.password === values.password
-      ) {
-        window.localStorage.setItem("login", "true");
-        dispatch(isAuthenticUser(values));
-        navigate.push("/");
-      } else {
-        setErrors({
-          userName: "invalid name",
-          password: "invaild password",
-        });
-      }
-    },
-  });
-  const { getFieldProps, handleSubmit } = formik;
+  
 
   return (
     <SigninCardStyled>
@@ -55,13 +30,11 @@ function SigninCard() {
             Sign In
           </Typography>
         </Box>
-        <FormikProvider value={formik}>
           <Stack
             spacing={3}
             component={Form}
             autoComplete="off"
             noValidate
-            onSubmit={handleSubmit}
           >
             {/* <InputBase placeholder="Username" {...getFieldProps("userName")} />
             <Stack className="forget-pass">
@@ -108,7 +81,6 @@ function SigninCard() {
               </Button>
             </Link>
           </Stack>
-        </FormikProvider>
         {/* <Stack className="register" spacing={0.7} mt={4}>
           <Link href="/">Forgot password?</Link>
           <Link href="/">Don’t have an account?</Link>

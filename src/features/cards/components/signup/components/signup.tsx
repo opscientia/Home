@@ -16,7 +16,7 @@ import { useFormik, Form, FormikProvider } from "formik";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useDispatch } from "react-redux";
 import { LoadingButton } from "@mui/lab";
-import { userSignup } from "@redux/userSlice";
+import { setUser } from "@redux/userSlice";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -37,7 +37,7 @@ function SigninCard() {
     onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
       const { rePassword, policyChecked, ...rest } = values;
       dispatch(
-        userSignup({
+        setUser({
           ...rest,
         })
       );
