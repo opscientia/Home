@@ -15,7 +15,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { LoadingButton } from "@mui/lab";
-import { userSelector, isAuthenticUser } from "@redux/userSlice";
 import { useFormik, Form, FormikProvider } from "formik";
 
 function SigninCard() {
