@@ -8,10 +8,7 @@ import { AuthLayout } from "@features/layouts";
 import { checkCookies, getCookie, getCookies } from "cookies-next";
 
 export default function Signin() {
-  const { isAuthentic } = useSelector(userSelector);
-  if (isAuthentic) {
-    return NextResponse.redirect("/");
-  }
+  
   return (
     <Stack
       sx={{
@@ -29,7 +26,7 @@ export default function Signin() {
 }
 Signin.getLayout = function getLayout(page: React.ReactElement) {
   return <AuthLayout>{page}</AuthLayout>;
-};
+}; 
 
 export async function getServerSideProps({ req, res }) {
   try {
