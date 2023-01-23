@@ -100,13 +100,11 @@ Home.getLayout = function getLayout(page: React.ReactElement) {
 
 export async function getServerSideProps({ req, res }) {
   try {
-    const authCheck = useSelector((state: RootState) => state.user.isAuthentic);
-    const dispatch = useDispatch();
+    
     const cookieExists = getCookie("token", { req, res });
     console.log("cookie Exists:" + cookieExists);
-    if (cookieExists) {
-      dispatch(setIsAuthentic(true));
-    }
+    // if (cookieExists) {
+    // }
 
     return { props: {} }; // set isAuthentic property to true using redux
   } catch (err) {
