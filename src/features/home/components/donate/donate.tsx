@@ -5,6 +5,85 @@ import { DonateCard } from "@features/cards";
 import Slider from "react-slick";
 import useWindowSize from "@hooks/windowResize";
 
+const cardMockData: any[] = [
+  {
+    title: "AI Safety: Original Work",
+    img: "/Frame 837 (2).svg",
+    desc: "Cepheids are important cosmic benchmarks for scaling galactic and extragalactic distances.",
+    tag1: "DeSci Tooling",
+    tag2: "Astronomy",
+    contributors: [
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+      "Ellipse 23.svg",
+      ",Ellipse.svg",
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+    ],
+  },
+  {
+    title: "Finding Cepheid Variable Stars",
+    img: "/Frame 837.svg",
+    desc: "Foresight Institute - AI Safety Contribution",
+    tag1: "Papers",
+    tag2: "Artificial Intelligence",
+    contributors: ["Ellipse.svg", "Ellipse 23.svg"],
+  },
+
+  {
+    title: "Arterial Spin Labeling Sleep Study in Teenagers",
+    img: "/Frame 837 (3).svg",
+    desc: "ASL images from 40 participants, average age 15.5 years, 45% female, with sleep deprivation",
+    tag1: "OpSci Commons",
+    tag2: "Neuroscience",
+    contributors: [
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+    ],
+  },
+
+  {
+    title: "Pre-Registered Experiment: fMRI Ibogaine Study",
+    img: "Frame 837 (4).svg",
+    desc: "https://osf.io/zzzz/",
+    tag1: "Open Science",
+    tag2: "Framework",
+    contributors: ["Ellipse 23.svg", "Ellipse.svg", "Ellipse 23.svg"],
+  },
+  {
+    title: "AI Safety: Original Work",
+    img: "/Frame 837 (2).svg",
+    desc: "Cepheids are important cosmic benchmarks for scaling galactic and extragalactic distances.",
+    tag1: "DeSci Tooling",
+    tag2: "Astronomy",
+    contributors: [
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+      "Ellipse 23.svg",
+      ",Ellipse.svg",
+      "Ellipse 23.svg",
+      "Ellipse.svg",
+      "Ellipse 23.svg",
+    ],
+  },
+  {
+    title: "Finding Cepheid Variable Stars",
+    img: "/Frame 837.svg",
+    desc: "Foresight Institute - AI Safety Contribution",
+    tag1: "Papers",
+    tag2: "Artificial Intelligence",
+    contributors: ["Ellipse.svg", "Ellipse 23.svg"],
+  },
+
+];
+
 const settings = {
   infinite: true,
   speed: 500,
@@ -59,20 +138,23 @@ function Donate() {
           spacing={0}
           alignItems="flex-start"
           justifyContent="flex-start"
-          position="relative">
+          position="relative"
+        >
           <Typography
             ref={left}
             variant="h1"
             fontFamily="'Exo 2'"
             className="title"
-            fontWeight={500}>
+            fontWeight={500}
+          >
             Discover
           </Typography>
           <Typography
             color="primary"
             variant="h1"
             fontFamily="'Exo 2'"
-            fontWeight={500}>
+            fontWeight={500}
+          >
             Impact Certificates
           </Typography>
           <Typography variant="h1" fontFamily="'Exo 2'" fontWeight={500}>
@@ -82,7 +164,8 @@ function Donate() {
             variant="h3"
             fontWeight={500}
             fontStyle="italic"
-            className="comming-soon">
+            className="comming-soon"
+          >
             *coming soon
           </Typography>
         </Stack>
@@ -100,11 +183,12 @@ function Donate() {
       />
       <Box className="slider-container">
         <Slider {...settings}>
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <Box px={1} key={idx}>
-              <DonateCard />
-            </Box>
-          ))}
+
+{        cardMockData.map((cardData)=>(<Box px={1}>
+            <DonateCard  cardData={cardData}/>
+          </Box>))
+}          
+
         </Slider>
         <Box
           sx={{
@@ -117,7 +201,8 @@ function Donate() {
             },
             direction: "row-reverse",
             mt: 3,
-          }}>
+          }}
+        >
           {/* <Button
             sx={{ mt: 2, mx: 1, fontFamily: "'Exo 2'" }}
             size="small"
@@ -134,7 +219,8 @@ function Donate() {
                 background: "#FFf",
               },
             }}
-            size="small">
+            size="small"
+          >
             Load More
           </Button>
         </Box>

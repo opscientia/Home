@@ -45,14 +45,14 @@ export const nav2 = [
   },
 ];
 export const buttons = [
-  // {
-  //   name: "subscribe",
-  //   path: "/",
-  // },
-  // {
-  //   name: "Sign Up",
-  //   path: "/",
-  // },
+  {
+    name: "subscribe",
+    path: "/",
+  },
+  {
+    name: "Sign Up",
+    path: "/",
+  },
 ];
 export const navicon = [
   {

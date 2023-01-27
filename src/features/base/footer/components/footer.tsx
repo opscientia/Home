@@ -62,7 +62,7 @@ function Footer() {
                   justifyContent="space-between"
                   className="nav-links"
                 >
-                  {/* <List>
+                  <List>
                     {nav1.map((item, i) => (
                       <ListItem key={item.name}>
                         <ListItemButton>
@@ -93,7 +93,7 @@ function Footer() {
                         </ListItemButton>
                       </ListItem>
                     ))}
-                  </List> */}
+                  </List>
                                 <Stack
                 direction={{ sm: "row", xs: "column" }}
                 justifyContent={{ sm: "center" }}
@@ -135,7 +135,7 @@ function Footer() {
             spacing={3}
           >
             <Grid item xs={12} md={7} sm={12}>
-              {/* <Stack
+              <Stack
                 direction={{ sm: "row", xs: "column" }}
                 justifyContent={{ sm: "center" }}
                 spacing={2}
@@ -158,7 +158,7 @@ function Footer() {
                     </a>
                   ))}
                 </Stack>
-              </Stack> */}
+              </Stack>
             </Grid>
             <Grid item xs={12} sm={5}>
               <Stack alignItems={{ xs: "center", sm: "start" }}>
