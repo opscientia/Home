@@ -2,8 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { SigninCard, SigninOrcidCard } from "@features/cards";
 import { NextResponse } from "next/server";
-import { useSelector } from "react-redux";
-import { userSelector } from "@redux/userSlice";
+
 import { AuthLayout } from "@features/layouts";
 import { checkCookies, getCookie, getCookies } from "cookies-next";
 
