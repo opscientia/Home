@@ -94,30 +94,7 @@ function Footer() {
                       </ListItem>
                     ))}
                   </List>
-                                <Stack
-                direction={{ sm: "row", xs: "column" }}
-                justifyContent={{ sm: "center" }}
-                spacing={2}
-                alignItems="center"
-              >
-                <Typography
-                  variant="body2"
-                  textTransform="uppercase"
-                  fontFamily="'Exo 2'"
-                  fontWeight={500}
-                >
-                  CONNECT WITH US
-                </Typography>
-                <Stack direction="row" spacing={{ xs: 1, sm: 2 }}>
-                  {navicon.map((item) => (
-                    <a href={item.path}>
-                      <IconButton className="btn-icon" key={item.name}>
-                        <Icon path={item.name} />
-                      </IconButton>
-                    </a>
-                  ))}
-                </Stack>
-                </Stack>
+                        
                   
                 </Stack>
                 

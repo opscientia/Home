@@ -6,7 +6,7 @@ const donateStyled = styled(Card)(({ theme }) => ({
   border: '1px solid rgba(253, 160, 255, 0.1)',
 borderRadius: '0px 0px 12px 12px',
 maxWidth: '381px',
-height:'680px',
+minHeight:'max-content',
   // borderRadius: theme.spacing(4),
   boxShadow:
     "inset -4px -4px 8px rgba(0, 0, 0, 0.25), inset 4px 4px 8px rgba(0, 0, 0, 0.25)",

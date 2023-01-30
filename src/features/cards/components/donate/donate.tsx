@@ -38,7 +38,7 @@ function DonateCard(props: Props) {
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          sx={{ background: "#393049", height: "44px", p: "8px" }}
+          sx={{ background: "#1F2033", height: "44px", p: "8px" }}
         >
           <Box
             sx={{
@@ -292,7 +292,7 @@ function DonateCard(props: Props) {
             </Box>
           </Stack>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{pb:'16px !important'}}>
           <Button
             sx={{
               minHeight: "auto",
