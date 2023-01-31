@@ -8,6 +8,8 @@ import {
   IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
+import { checkCookies, getCookie, getCookies } from "cookies-next";
+
 import IconUrl from "@utils/Icon";
 import SigninCardStyled from "./overrides/signinCardStyle";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -64,36 +66,8 @@ function SigninCard() {
             noValidate
             onSubmit={handleSubmit}
           >
-            {/* <InputBase placeholder="Username" {...getFieldProps("userName")} />
-            <Stack className="forget-pass">
-              <InputBase
-                type={show ? "text" : "password"}
-                fullWidth
-                placeholder="Password"
-                {...getFieldProps("password")}
-                endAdornment={
-                  <IconButton size="small" onClick={showPassword}>
-                    <VisibilityIcon {...(show && { color: "primary" })} />
-                  </IconButton>
-                }
-              />
-              <Link href="/">forgot password?</Link>
-            </Stack> */}
-            {/* <LoadingButton
-              type="submit"
-              variant="contained"
-              className="btn-signin"
-            >
-              Sign in
-            </LoadingButton> */}
-            {/* <Button
-              sx={{ textTransform: "capitalize", fontFamily: "'Exo 2'" }}
-              variant="holo"
-              startIcon={<IconUrl path="holo" />}
-            >
-              Continue with Holo
-            </Button> */}
             <Link href="/api/orcid">
+               {checkCookies? 
               <Button
                 sx={{
                   textTransform: "capitalize",
@@ -106,15 +80,10 @@ function SigninCard() {
                 startIcon={<IconUrl path="holo" />}
               >
                 Continue with ORCID
-              </Button>
+              </Button>:'' }
             </Link>
           </Stack>
         </FormikProvider>
-        {/* <Stack className="register" spacing={0.7} mt={4}>
-          <Link href="/">Forgot password?</Link>
-          <Link href="/">Don’t have an account?</Link>
-          <Link href="/auth/signup">Sign up</Link>
-        </Stack> */}
       </CardContent>
     </SigninCardStyled>
   );

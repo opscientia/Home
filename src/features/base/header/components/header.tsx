@@ -12,12 +12,13 @@ import { MobileDialog } from "@features/dialog";
 import { useSelector } from "react-redux";
 import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
+
 export default function BasicAppBar() {
   const { isAuthentic, user } = useSelector(userSelector);
   const navigate = useRouter();
   const [scrollY, setScrollY] = React.useState(0);
   const [open, setOpen] = React.useState(false);
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const handleScroll = (e) => {
       setScrollY(window.scrollY);
     };
