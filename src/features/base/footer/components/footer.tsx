@@ -21,6 +21,7 @@ import {
   buttons,
 } from "@features/base/footer/components/config";
 
+
 function Footer() {
   return (
     <FooterStyled component="footer">
@@ -72,7 +73,10 @@ function Footer() {
                             color={i === 0 ? "primary" : "text.secondary"}
                             fontWeight={i === 0 ? "600" : "500"}
                           >
+                            <Link href={item.path}>
                             {item.name}
+                            </Link>
+
                           </Typography>
                         </ListItemButton>
                       </ListItem>
@@ -88,7 +92,10 @@ function Footer() {
                             color={i === 0 ? "primary" : "text.secondary"}
                             fontWeight={i === 0 ? "600" : "500"}
                           >
+                            <Link href={item.path}>
+
                             {item.name}
+                            </Link>
                           </Typography>
                         </ListItemButton>
                       </ListItem>

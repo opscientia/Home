@@ -9,7 +9,7 @@ function t1({data}) {
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Icon path="comas" />
         </Box>
-        <Typography variant="h5" fontWeight={400} mt={4} gutterBottom>
+        <Typography variant="h5" fontWeight={400} mt={4} gutterBottom sx={{textAlign:'center'}}>
           {data}
         </Typography>
         {/* <Typography
