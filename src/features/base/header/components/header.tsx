@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useEffect } from "react";
+
 import Toolbar from "@mui/material/Toolbar";
 import Icon from "@utils/Icon";
 import Link from "next/link";
@@ -13,11 +15,11 @@ import { useSelector } from "react-redux";
 import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
 export default function BasicAppBar() {
-  const { isAuthentic, user,authenticatedUser } = useSelector(userSelector);
+  const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
   const navigate = useRouter();
   const [scrollY, setScrollY] = React.useState(0);
   const [open, setOpen] = React.useState(false);
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const handleScroll = (e) => {
       setScrollY(window.scrollY);
     };
@@ -34,7 +36,8 @@ export default function BasicAppBar() {
       {isDesktop && (
         <HeaderStyled
           position="fixed"
-          className={scrollY > 200 ? "scrolled" : ""}>
+          className={scrollY > 200 ? "scrolled" : ""}
+        >
           <Toolbar>
             <Link href="/">
               <a>
@@ -49,12 +52,15 @@ export default function BasicAppBar() {
               <MenuPopover user={user} />
             ) : (
               <Fab
-                onClick={() =>!authenticatedUser && navigate.push("/auth/signin")}
+                onClick={() =>
+                  !authenticatedUser && navigate.push("/auth/signin")
+                }
                 variant="extended"
                 size="small"
                 color="primary"
-                className="btn-sign">
-              {authenticatedUser?'Welcome Test User':'Sign In'}
+                className="btn-sign"
+              >
+                {authenticatedUser ? "Welcome Test User" : "Sign In"}
               </Fab>
             )}
           </Toolbar>
@@ -63,7 +69,8 @@ export default function BasicAppBar() {
       {!isDesktop && (
         <HeaderStyled
           position="fixed"
-          className={scrollY > 200 ? "scrolled" : ""}>
+          className={scrollY > 200 ? "scrolled" : ""}
+        >
           <Toolbar>
             <Link href="/">
               <a>
