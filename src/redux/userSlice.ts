@@ -9,6 +9,7 @@ export const userSlice = createSlice({
   initialState: {
     user: {} as User,
     isAuthentic: false,
+    authenticatedUser:false
   },
   reducers: {
     userSignup: (state, action) => {
@@ -27,9 +28,13 @@ export const userSlice = createSlice({
     setIsAuthentic: (state, action) => {
       state.isAuthentic = action.payload;
     },
+    authenticateUser:(state,payload)=>{
+      state.authenticatedUser = true;
+
+    }
   },
 })
-export const { userSignup, isAuthenticUser, setIsAuthentic } =
+export const { userSignup, isAuthenticUser, setIsAuthentic,authenticateUser } =
   userSlice.actions;
 
 export const userSelector = (state) => state.user;

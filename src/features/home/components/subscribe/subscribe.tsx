@@ -24,7 +24,7 @@ function Sponcers() {
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
-    setOffSetLeft(left.current.getBoundingClientRect().left);
+    setOffSetLeft(left?.current?.getBoundingClientRect()?.left);
   }, [windowSize]);
 
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] =
@@ -38,7 +38,7 @@ function Sponcers() {
     console.log(data);
   };
 
-  
+
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>
       <form onSubmit={handleSubmit(onSubmit)}>

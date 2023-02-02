@@ -37,8 +37,9 @@ function Sponcers() {
 
       <Box className='sponsor-container' px={3}>
         <Marquee speed={50} gradient={false}>
-          {icons.map((icon) => (
+          {icons.map((icon, index) => (
             <Box
+              key={index}
               sx={{ mx: 5 }}
               component='img'
               src={icon.src}

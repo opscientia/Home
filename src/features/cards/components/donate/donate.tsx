@@ -168,7 +168,7 @@ function DonateCard(props: Props) {
                 borderRadius: "40px",
                 pl: "6px",
                 pr: "6px",
-                textTransform:'capitalize'
+                textTransform: 'capitalize'
               }}
             >
               {props.cardData.tag1}
@@ -182,7 +182,7 @@ function DonateCard(props: Props) {
                 pr: "6px",
                 background: "rgba(253, 160, 255, 0.2)",
                 borderRadius: "40px",
-                textTransform:'capitalize'
+                textTransform: 'capitalize'
 
               }}
             >
@@ -227,7 +227,7 @@ function DonateCard(props: Props) {
                   {props.cardData.contributors.map((src: any, index) => {
                     return (
                       index <= 3 && (
-                        <Box component="img" src={src} sx={{ zIndex: "200" }} />
+                        <Box component="img" src={src} sx={{ zIndex: "200" }} key={src + index} />
                       )
                     );
                   })}
@@ -273,7 +273,7 @@ function DonateCard(props: Props) {
                 </Typography>{" "}
                 <input
                   type="text"
-                  value="01/01/23 to 01/02/23"
+                  defaultValue="01/01/23 to 01/02/23"
                   style={{
                     background: "none",
                     border: "1px solid #393B50",
@@ -292,7 +292,7 @@ function DonateCard(props: Props) {
             </Box>
           </Stack>
         </CardContent>
-        <CardActions sx={{pb:'16px !important'}}>
+        <CardActions sx={{ pb: '16px !important' }}>
           <Button
             sx={{
               minHeight: "auto",

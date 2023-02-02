@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { LoadingButton } from "@mui/lab";
-import { userSelector, isAuthenticUser } from "@redux/userSlice";
+import { userSelector, isAuthenticUser, setIsAuthentic, authenticateUser } from "@redux/userSlice";
 import { useFormik, Form, FormikProvider } from "formik";
 
 function SigninCard() {
@@ -93,7 +93,14 @@ function SigninCard() {
             >
               Continue with Holo
             </Button> */}
-            <Link href="/api/orcid">
+            <Link
+
+
+              // href="/api/orcid"
+              href="/"
+
+
+            >
               <Button
                 sx={{
                   textTransform: "capitalize",
@@ -104,6 +111,9 @@ function SigninCard() {
                 }}
                 variant="holo"
                 startIcon={<IconUrl path="holo" />}
+                onClick={() => {
+                  dispatch(authenticateUser(true))
+                }}
               >
                 Continue with ORCID
               </Button>

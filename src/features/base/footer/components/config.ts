@@ -6,19 +6,23 @@ export const nav1 = [
 
   {
     name: "Ecosystem",
-    path: "/",
+    path: "https://google.com",
+    external: true,
   },
   {
     name: "Whitepaper",
-    path: "/",
+    path: "/whitepaper",
+    external: false,
   },
   {
     name: "Roadmap",
-    path: "/",
+    path: "/roadmao",
+    external: false,
   },
   {
     name: "About",
-    path: "/",
+    path: "/about",
+    external: false,
   },
 ];
 
@@ -29,19 +33,23 @@ export const nav2 = [
   },
   {
     name: "Community",
-    path: "/",
+    path: "/community",
+    external: false,
   },
   {
     name: "Research",
-    path: "/",
+    path: "/research",
+    external: false,
   },
   {
     name: "Careers",
-    path: "/",
+    path: "/careers",
+    external: false,
   },
   {
     name: "FAQs",
-    path: "/",
+    path: "/faqs",
+    external: false,
   },
 ];
 export const buttons = [
@@ -75,5 +83,4 @@ export const navicon = [
     name: "you",
     path: "https://youtu.be/mSMsDobOOAE",
   },
-  
 ];

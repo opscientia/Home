@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
 export default function BasicAppBar() {
-  const { isAuthentic, user } = useSelector(userSelector);
+  const { isAuthentic, user,authenticatedUser } = useSelector(userSelector);
   const navigate = useRouter();
   const [scrollY, setScrollY] = React.useState(0);
   const [open, setOpen] = React.useState(false);
@@ -49,12 +49,12 @@ export default function BasicAppBar() {
               <MenuPopover user={user} />
             ) : (
               <Fab
-                onClick={() => navigate.push("/auth/signin")}
+                onClick={() =>!authenticatedUser && navigate.push("/auth/signin")}
                 variant="extended"
                 size="small"
                 color="primary"
                 className="btn-sign">
-                Sign In
+              {authenticatedUser?'Welcome Test User':'Sign In'}
               </Fab>
             )}
           </Toolbar>
