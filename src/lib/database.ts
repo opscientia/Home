@@ -1,5 +1,5 @@
 import mongoose, { ConnectOptions } from "mongoose";
-const uri = 'mongodb+srv://test:test@cluster0-test.qgvzkzr.mongodb.net/test';
+const uri = process.env.MONGODB_URI;
 const connect = () => {
   mongoose.connect(
     uri,

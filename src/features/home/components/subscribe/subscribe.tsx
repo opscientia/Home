@@ -14,12 +14,14 @@ import {
 } from "@mui/material";
 import useWindowSize from "@hooks/windowResize";
 import { useForm, SubmitHandler } from "react-hook-form";
+
 type Inputs = {
   email: string;
 };
 
 function Sponcers() {
   const theme = useTheme();
+  const apiKey = process.env.SIB;
   const [offSetLeft, setOffSetLeft] = React.useState(0);
   const left = React.useRef(null);
   const windowSize = useWindowSize();
@@ -36,8 +38,24 @@ function Sponcers() {
     // const newSubscriber = new Subscriber({ email: data.email });
     // await newSubscriber.save();
     console.log(data);
-  };
+    console.log(apiKey)
 
+    const options = {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        "api-key":
+          apiKey
+      },
+      body: JSON.stringify({ updateEnabled: false, email: data.email }),
+    };
+
+    fetch("https://api.sendinblue.com/v3/contacts", options)
+      .then((response) => response.json())
+      .then((response) => console.log(response))
+      .catch((err) => console.error(err));
+  };
 
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>
@@ -82,7 +100,6 @@ function Sponcers() {
                           className="emil"
                           type="email"
                           placeholder="Email"
-                          defaultValue="test@email.com"
                           {...register("email")}
                         />
                       </Box>

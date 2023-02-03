@@ -8,4 +8,8 @@ module.exports = {
         },
       ]
     },
+    env: {
+      SIB: process.env.SIB,
+      MONGODB_URI: process.env.MONGODB_URI
+    }
   }
