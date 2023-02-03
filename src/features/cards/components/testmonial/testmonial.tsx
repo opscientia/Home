@@ -22,7 +22,9 @@ function DonateCard() {
           fontWeight={500}>
           John Doe
         </Typography>
+        
       </CardContent>
+      
     </TestmonialStyled>
   );
 }

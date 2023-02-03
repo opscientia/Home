@@ -1,1 +1,2 @@
-export { default as TestmonialCard } from './testmonial'
+
+export { default as TestmonialCard } from "./t1";

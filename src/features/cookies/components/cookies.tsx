@@ -21,7 +21,7 @@ function Cookies() {
   const right = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
-    setOffSetRight(right.current.getBoundingClientRect().right);
+    setOffSetRight(right?.current?.getBoundingClientRect()?.right);
   }, [windowSize]);
 
   const handleOnClick = () => {

@@ -6,19 +6,23 @@ export const nav1 = [
 
   {
     name: "Ecosystem",
-    path: "/",
+    path: "https://google.com",
+    external: true,
   },
   {
     name: "Whitepaper",
-    path: "/",
+    path: "/whitepaper",
+    external: false,
   },
   {
     name: "Roadmap",
-    path: "/",
+    path: "/roadmao",
+    external: false,
   },
   {
     name: "About",
-    path: "/",
+    path: "/about",
+    external: false,
   },
 ];
 
@@ -29,19 +33,23 @@ export const nav2 = [
   },
   {
     name: "Community",
-    path: "/",
+    path: "/community",
+    external: false,
   },
   {
     name: "Research",
-    path: "/",
+    path: "/research",
+    external: false,
   },
   {
     name: "Careers",
-    path: "/",
+    path: "/careers",
+    external: false,
   },
   {
     name: "FAQs",
-    path: "/",
+    path: "/faqs",
+    external: false,
   },
 ];
 export const buttons = [
@@ -57,30 +65,22 @@ export const buttons = [
 export const navicon = [
   {
     name: "med",
-    path: "/",
+    path: "https://medium.com/opscientia-dao",
   },
   {
     name: "git",
-    path: "/",
+    path: "https://github.com/opscientia",
   },
   {
     name: "dor",
-    path: "/",
+    path: "https://discord.gg/n7UBwrGywZ",
   },
   {
     name: "twi",
-    path: "/",
+    path: "https://www.twitter.com/opscientia",
   },
   {
     name: "you",
-    path: "/",
+    path: "https://youtu.be/mSMsDobOOAE",
   },
-  {
-    name: "Layer 2",
-    path: "/",
-  },
-  //   {
-  //     name: "bell",
-  //     path: "/",
-  //   },
 ];

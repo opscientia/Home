@@ -32,7 +32,9 @@ function OpSciCard({ data }) {
           {data.description}
         </Typography>
         <CardActions sx={{ justifyContent: "center", mt: 3 }}>
-          <Button className="card-btn">{data.action}</Button>
+          <a href={data.href} style={{ textDecoration: 'none' }}>
+            <Button className="card-btn">{data.action}</Button>
+          </a>
         </CardActions>
       </CardContent>
     </OpsciStyled>

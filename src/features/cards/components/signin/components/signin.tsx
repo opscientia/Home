@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { LoadingButton } from "@mui/lab";
-import { userSelector, isAuthenticUser } from "@redux/userSlice";
+import { userSelector, isAuthenticUser, setIsAuthentic, authenticateUser } from "@redux/userSlice";
 import { useFormik, Form, FormikProvider } from "formik";
 
 function SigninCard() {
@@ -64,7 +64,7 @@ function SigninCard() {
             noValidate
             onSubmit={handleSubmit}
           >
-            <InputBase placeholder="Username" {...getFieldProps("userName")} />
+            {/* <InputBase placeholder="Username" {...getFieldProps("userName")} />
             <Stack className="forget-pass">
               <InputBase
                 type={show ? "text" : "password"}
@@ -78,22 +78,29 @@ function SigninCard() {
                 }
               />
               <Link href="/">forgot password?</Link>
-            </Stack>
-            <LoadingButton
+            </Stack> */}
+            {/* <LoadingButton
               type="submit"
               variant="contained"
               className="btn-signin"
             >
               Sign in
-            </LoadingButton>
-            <Button
+            </LoadingButton> */}
+            {/* <Button
               sx={{ textTransform: "capitalize", fontFamily: "'Exo 2'" }}
               variant="holo"
               startIcon={<IconUrl path="holo" />}
             >
               Continue with Holo
-            </Button>
-            <Link href="/api/orcid">
+            </Button> */}
+            <Link
+
+
+              // href="/api/orcid"
+              href="/"
+
+
+            >
               <Button
                 sx={{
                   textTransform: "capitalize",
@@ -104,17 +111,20 @@ function SigninCard() {
                 }}
                 variant="holo"
                 startIcon={<IconUrl path="holo" />}
+                onClick={() => {
+                  dispatch(authenticateUser(true))
+                }}
               >
                 Continue with ORCID
               </Button>
             </Link>
           </Stack>
         </FormikProvider>
-        <Stack className="register" spacing={0.7} mt={4}>
+        {/* <Stack className="register" spacing={0.7} mt={4}>
           <Link href="/">Forgot password?</Link>
           <Link href="/">Don’t have an account?</Link>
           <Link href="/auth/signup">Sign up</Link>
-        </Stack>
+        </Stack> */}
       </CardContent>
     </SigninCardStyled>
   );

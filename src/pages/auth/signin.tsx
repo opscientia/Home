@@ -19,6 +19,7 @@ export default function Signin() {
         backgroundSize: "cover",
         px: 2,
         py: 15,
+        height: '100vh'
       }}
       alignItems="center"
       justifyContent="center">
@@ -34,7 +35,7 @@ export async function getServerSideProps({ req, res }) {
   try {
     const cookieExists = getCookie("token", { req, res });
     console.log("cookie Exists:" + cookieExists);
-    if (cookieExists) return { redirect: { destination: "/dashboard" } };
+    if (cookieExists) return { redirect: { destination: "/account" } };
     return { props: {} };
   } catch (err) {
     return { props: {} };

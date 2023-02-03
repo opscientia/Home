@@ -9,7 +9,7 @@ function About() {
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
-    setOffSetLeft(left.current.getBoundingClientRect().left);
+    setOffSetLeft(left?.current?.getBoundingClientRect()?.left);
   }, [windowSize]);
   return (
     <AboutStyled component="section" widthoffset={offSetLeft}>
@@ -39,7 +39,7 @@ function About() {
               <Box mt={2}>
                 <Button
                   className="about-btn"
-                  onClick={() => navigate.push("/about")}>
+                  onClick={() => navigate.push("http://verse.opsci.io/")}>
                   Apply
                 </Button>
               </Box>

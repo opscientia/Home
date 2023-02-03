@@ -8,7 +8,7 @@ export default async function (req, res, next) {
   await connect();
   passport.authenticate("orcid", (err, user, info) => {
     if (err || !user) {
-      return res.redirect("http://localhost:5000/?a=auth_fail");
+      return res.redirect("/?a=auth_fail");
     }
 
     // set cookie and send redirect
@@ -16,6 +16,6 @@ export default async function (req, res, next) {
       req,
       res,
     });
-    res.redirect("http://localhost:5000/dashboard");
+    res.redirect("/account");
   })(req, res, next);
 }

@@ -8,6 +8,9 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Icon from "@utils/Icon";
 import IconButton from "@mui/material/IconButton";
+
+import Divider from "@mui/material/Divider";
+
 import { CardMedia } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import DonateProgress from "./DonateProgress";
@@ -16,7 +19,11 @@ import ReactCardFlip from "react-card-flip";
 import { useTheme, alpha } from "@mui/material/styles";
 const img = "/static/images/avatar.png";
 
-function DonateCard() {
+type Props = {
+  cardData: any;
+};
+
+function DonateCard(props: Props) {
   const theme = useTheme();
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlipped = (e) => {
@@ -26,134 +33,296 @@ function DonateCard() {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <DonateStyled>
-        <CardContent>
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between">
-            <Stack direction="row" alignItems="center" spacing={3}>
-              <Avatar
-                {...(img
-                  ? {
-                      src: img,
-                      alt: "some-name",
-                      sx: { bgcolor: "transparent" },
-                    }
-                  : {})}
-              />
-              <Typography
-                color="common.black"
-                fontWeight={500}
-                fontFamily="'Exo 2'"
-                variant="h4">
-                hodgkinx
-              </Typography>
-            </Stack>
-            <Label variant="filled" className="label">
-              0x2345
-            </Label>
-          </Stack>
-          <CardMedia
-            sx={{ mt: 2, height: 300, mx: "auto" }}
-            image="/static/icons/commons.svg"
-          />
-          <Typography
-            gutterBottom
-            color="common.black"
-            fontFamily="'Exo 2'"
-            variant="h3"
-            mt={2}>
-            OpSci Society
-          </Typography>
-          <Typography
-            color={(theme) => theme.palette.grey[500]}
-            fontFamily="'Exo 2'">
-            Short description of this card
-          </Typography>
-          <Stack
-            direction="row"
-            spacing={1}
-            alignItems="center"
-            mt={1}
-            borderBottom={1}
-            borderColor="divider"
-            pb={2}>
-            <Label
-              variant="filled"
+        {/* Header top */}
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ background: "#1F2033", height: "44px", p: "8px" }}
+        >
+          <Box
+            sx={{
+              // display: "flex",
+              background: "#1F2033",
+              height: "28px",
+
+              display: "grid",
+              gridTemplateColumns: "repeat(2,auto)",
+              alignItems: "center",
+              // borderRadius: '8px 0px 0px 8px',
+              borderRadius: "8px",
+            }}
+          >
+            <Box
+              component="img"
+              src="/NFT.svg"
               sx={{
-                backgroundColor: alpha(theme.palette.secondary.main, 0.3),
+                width: "37px",
+                height: "100%",
+                pl: "6px",
+                pr: "4px",
+                borderTopLeftRadius: "8px",
+                borderBottomLeftRadius: "8px",
+
+                background: "#2B2D47",
               }}
-              className="big-label">
-              <Icon path="ic-tag" />
-              Community
-            </Label>
-            <Label variant="filled" className="join-label">
-              <Typography fontSize="10px" fontWeight={500}>
-                Raised
-              </Typography>
-              <Typography fontSize="10px">10.3 ETH</Typography>
-            </Label>
-            <Label
-              variant="filled"
-              sx={{ color: (theme) => theme.palette.text.secondary }}>
-              NFT
-            </Label>
-            <Label variant="filled">
-              <Icon path="ic-link" />
-            </Label>
-          </Stack>
-          <Stack direction="row" spacing={5} alignItems="center" mt={1.5}>
-            <Box>
-              <Typography
-                color="text.secondary"
-                fontFamily="'Exo 2'"
-                variant="body2">
-                IMPACT MOMENTUM
-              </Typography>
-              <Stack
-                direction="row"
-                spacing={1}
-                alignItems="center"
-                justifyContent="flex-start">
-                <DonateProgress />
-                <Typography
-                  fontFamily="'Exo 2'"
-                  color="common.black"
-                  variant="h3">
-                  25%
-                </Typography>
-              </Stack>
+            />
+            <Typography
+              sx={{
+                fontFamily: "'Inter', sans-serif",
+                height: "100%",
+                fontWeight: "600",
+                width: "71px",
+
+                border: "2px solid #2B2D47",
+                borderLeft: "none",
+                borderTopRightRadius: "8px",
+                borderBottomRightRadius: "8px",
+                fontSize: "13px",
+                color: "#525AA2",
+                display: "grid",
+                alignContent: "center",
+                textAlign: "center",
+              }}
+            >
+              0x2345..
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: "flex", columnGap: "12px" }}>
+            <Typography
+              sx={{
+                fontFamily: "'Inter', sans-serif",
+
+                color: "#8C8A8A",
+                fontWeight: "500",
+
+                width: "122px",
+                height: "28px",
+                background: "#2B2D47",
+                borderRadius: "8px",
+
+                fontSize: "13px",
+                textAlign: "center",
+                display: "grid",
+                alignItems: "center",
+              }}
+            >
+              miller.id.desci.eth
+            </Typography>
+            <Box
+              sx={{
+                width: "28px",
+                height: "28px",
+
+                background: "#2B2D47",
+                borderRadius: "8px",
+                display: "grid",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                component="img"
+                src="/Icon.svg"
+                sx={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
             </Box>
+          </Box>
+        </Stack>
+        {/* Header top */}
+
+        <CardContent
+          sx={{
+            background: "linear-gradient(156.94deg, #24263E 0%, #1E191F 100%)",
+            boxShadow: "none !important",
+            border: "none",
+          }}
+        >
+          <Box component="img" src={props.cardData.img} />
+          <Typography
+            sx={{
+              fontWeight: "500",
+              fontSize: "20px",
+              lineHeight: "24px",
+              letterSpacing: "0.05em",
+              mt: "16px",
+
+              color: "#FDF5FF",
+            }}
+          >
+            {props.cardData.title}
+          </Typography>
+
+          <Box sx={{ display: "flex", columnGap: "8px", mt: "8px" }}>
+            <Button
+              sx={{
+                fontSize: "11px",
+                height: "20px",
+                minHeight: "auto",
+                color: "#ACDCAE",
+                background: "rgba(172, 220, 174, 0.2)",
+                border: "1px solid rgba(172, 220, 174, 0.3)",
+                borderRadius: "40px",
+                pl: "6px",
+                pr: "6px",
+                textTransform: 'capitalize'
+              }}
+            >
+              {props.cardData.tag1}
+            </Button>
+            <Button
+              sx={{
+                fontSize: "11px",
+                height: "20px",
+                minHeight: "auto",
+                pl: "6px",
+                pr: "6px",
+                background: "rgba(253, 160, 255, 0.2)",
+                borderRadius: "40px",
+                textTransform: 'capitalize'
+
+              }}
+            >
+              {props.cardData.tag2}
+            </Button>
+          </Box>
+
+          <Typography
+            sx={{
+              fontWeight: "400",
+              fontSize: "14px",
+              lineHeight: "17px",
+              mt: "8px",
+              color: "#C0C0C0",
+            }}
+          >
+            {props.cardData.desc}
+          </Typography>
+
+          <Divider sx={{ borderColor: "#393B50", mt: "16px", mb: "16px" }} />
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+          >
             <Box>
-              <Typography
-                color="text.secondary"
-                fontFamily="'Exo 2'"
-                variant="body2">
-                IMPACT PRICE
-              </Typography>
-              <Typography
-                fontFamily="'Exo 2'"
-                color="common.black"
-                variant="h3">
-                0.10 ETH
-              </Typography>
+              <Box>
+                <Typography
+                  sx={{
+                    fontWeight: "400",
+                    fontSize: "13px",
+                    lineHeight: "16px",
+                    /* identical to box height */
+
+                    color: "#737480;",
+                    mb: "8px",
+                  }}
+                >
+                  Contributors
+                </Typography>{" "}
+                <Box sx={{ display: "flex" }}>
+                  {props.cardData.contributors.map((src: any, index) => {
+                    return (
+                      index <= 3 && (
+                        <Box component="img" src={src} sx={{ zIndex: "200" }} key={src + index} />
+                      )
+                    );
+                  })}
+                  {props.cardData.contributors.length > 4 && (
+                    <Box
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        border: "1px solid #393B50",
+                        fontWeight: "400",
+                        fontSize: "10px",
+                        lineHeight: "12px",
+                        borderRadius: "50%",
+
+                        color: "#737480",
+                        display: "grid",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        ml: "4px",
+                      }}
+                    >
+                      +{props.cardData.contributors.length - 4}
+                    </Box>
+                  )}
+                </Box>
+              </Box>
+            </Box>
+
+            <Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontWeight: "400",
+                    fontSize: "13px",
+                    lineHeight: "16px",
+                    /* identical to box height */
+
+                    color: "#737480;",
+                    mb: "8px",
+                  }}
+                >
+                  Time Period
+                </Typography>{" "}
+                <input
+                  type="text"
+                  defaultValue="01/01/23 to 01/02/23"
+                  style={{
+                    background: "none",
+                    border: "1px solid #393B50",
+                    borderRadius: "8px",
+                    height: "24px",
+                    padding: "8px",
+                    width: "136px",
+                    fontWeight: "400",
+                    fontSize: "12px",
+                    lineHeight: "15px",
+
+                    color: "#C0C0C0",
+                  }}
+                />
+              </Box>
             </Box>
           </Stack>
         </CardContent>
-        <CardActions>
-          <IconButton disableRipple onClick={handleFlipped}>
-            <Icon path="Frame" className="logo" />
-          </IconButton>
+        <CardActions sx={{ pb: '16px !important' }}>
+          <Button
+            sx={{
+              minHeight: "auto",
+              border: "none",
+              minWidth: "auto",
+              width: "46.54px",
+              height: "48px",
+              background: "#2A2C45",
+              padding: "0",
+            }}
+          >
+            <Box
+              component="img"
+              src="/Vector.svg"
+              sx={{ width: "24.54", height: "24px" }}
+            />
+          </Button>
 
           <Button
             sx={{
-              mx: 2,
-              fontFamily: "'Exo 2'",
-              fontWeight: 600,
+              minWidth: "none",
+              width: "100%",
+              ml: "16px",
+              background: "#426C4B",
+              color: "white",
+              textTransform: "capitalize",
+              border: "none",
             }}
-            fullWidth
-            variant="contained">
-            Support
+          >
+            Donate to Mint
           </Button>
         </CardActions>
       </DonateStyled>
@@ -170,7 +339,8 @@ function DonateCard() {
                 color="common.black"
                 fontWeight={500}
                 fontFamily="'Exo 2'"
-                variant="h4">
+                variant="h4"
+              >
                 hodgkinx
               </Typography>
               <Typography color="text.secondary" fontWeight={500}>
@@ -181,7 +351,8 @@ function DonateCard() {
           <Typography
             color={theme.palette.grey[500]}
             fontFamily="'Exo 2'"
-            gutterBottom>
+            gutterBottom
+          >
             Sed sed justo sit amet mauris bibendum egestas sed a elit. Maecenas
             ultrices orci id ipsum finibus, sit amet ornare tortor ornare. Morbi
             egestas risus sed nunc.
@@ -192,7 +363,8 @@ function DonateCard() {
                 variant="filled"
                 sx={{
                   backgroundColor: theme.palette.info.main,
-                }}>
+                }}
+              >
                 <Icon path="ic-check-filled" /> Holonym
               </Label>
               <Label
@@ -200,7 +372,8 @@ function DonateCard() {
                 sx={{
                   backgroundColor: alpha(theme.palette.info.main, 0.3),
                   color: theme.palette.info.main,
-                }}>
+                }}
+              >
                 0xf023
               </Label>
             </Stack>
@@ -229,13 +402,15 @@ function DonateCard() {
             mt={1}
             borderBottom={1}
             borderColor="divider"
-            pb={2}>
+            pb={2}
+          >
             <Label
               variant="filled"
               sx={{
                 backgroundColor: alpha(theme.palette.secondary.main, 0.3),
               }}
-              className="big-label">
+              className="big-label"
+            >
               <Icon path="ic-tag" />
               Community
             </Label>
@@ -256,7 +431,8 @@ function DonateCard() {
             color="common.black"
             fontFamily="'Exo 2'"
             variant="h3"
-            mt={1}>
+            mt={1}
+          >
             Fellowship Project
           </Typography>
           <Stack direction="row" spacing={1} alignItems="center" mt={0.6}>
@@ -268,7 +444,8 @@ function DonateCard() {
             </Label>
             <Label
               variant="filled"
-              sx={{ color: (theme) => theme.palette.text.secondary }}>
+              sx={{ color: (theme) => theme.palette.text.secondary }}
+            >
               NFT
             </Label>
             <Label variant="filled">
@@ -279,7 +456,8 @@ function DonateCard() {
             color={theme.palette.grey[500]}
             fontFamily="'Exo 2'"
             gutterBottom
-            mt={1}>
+            mt={1}
+          >
             Pellentesque varius metus elementum massa bibendum, in efficitur
             sapien tincidunt. Donec finibus quis erat at eleifend. Nullam
             consequat hendrerit bibendum sit.
@@ -290,19 +468,22 @@ function DonateCard() {
                 <Typography
                   color="text.secondary"
                   fontFamily="'Exo 2'"
-                  variant="body2">
+                  variant="body2"
+                >
                   IMPACT MOMENTUM
                 </Typography>
                 <Stack
                   direction="row"
                   spacing={1}
                   alignItems="center"
-                  justifyContent="flex-start">
+                  justifyContent="flex-start"
+                >
                   <DonateProgress />
                   <Typography
                     fontFamily="'Exo 2'"
                     color="common.black"
-                    variant="h3">
+                    variant="h3"
+                  >
                     25%
                   </Typography>
                 </Stack>
@@ -311,13 +492,15 @@ function DonateCard() {
                 <Typography
                   color="text.secondary"
                   fontFamily="'Exo 2'"
-                  variant="body2">
+                  variant="body2"
+                >
                   IMPACT PRICE
                 </Typography>
                 <Typography
                   fontFamily="'Exo 2'"
                   color="common.black"
-                  variant="h3">
+                  variant="h3"
+                >
                   0.10 ETH
                 </Typography>
               </Box>
@@ -327,18 +510,21 @@ function DonateCard() {
               mt={1.5}
               width={1}
               borderLeft={1}
-              borderColor="divider">
+              borderColor="divider"
+            >
               <Box borderBottom={1} pl={2} pb={1} borderColor="divider">
                 <Typography
                   color="text.secondary"
                   fontFamily="'Exo 2'"
-                  variant="body2">
+                  variant="body2"
+                >
                   TARGET
                 </Typography>
                 <Typography
                   fontFamily="'Exo 2'"
                   color="common.black"
-                  variant="h3">
+                  variant="h3"
+                >
                   10 ETH
                 </Typography>
               </Box>
@@ -347,13 +533,15 @@ function DonateCard() {
                 <Typography
                   color="text.secondary"
                   fontFamily="'Exo 2'"
-                  variant="body2">
+                  variant="body2"
+                >
                   IMPACT PRICE
                 </Typography>
                 <Typography
                   fontFamily="'Exo 2'"
                   color="common.black"
-                  variant="h3">
+                  variant="h3"
+                >
                   0.10 ETH
                 </Typography>
               </Box>
@@ -372,7 +560,8 @@ function DonateCard() {
               fontWeight: 600,
             }}
             fullWidth
-            variant="contained">
+            variant="contained"
+          >
             Support
           </Button>
         </CardActions>

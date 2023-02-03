@@ -1,8 +1,13 @@
 import { styled, alpha } from "@mui/material/styles";
 import { Card } from "@mui/material";
 const donateStyled = styled(Card)(({ theme }) => ({
-  background: theme.palette.common.white,
-  borderRadius: theme.spacing(4),
+  // background: theme.palette.common.white,
+  background: 'linear-gradient(156.94deg, #24263E 0%, #1E191F 100%)',
+  border: '1px solid rgba(253, 160, 255, 0.1)',
+borderRadius: '0px 0px 12px 12px',
+maxWidth: '381px',
+minHeight:'max-content',
+  // borderRadius: theme.spacing(4),
   boxShadow:
     "inset -4px -4px 8px rgba(0, 0, 0, 0.25), inset 4px 4px 8px rgba(0, 0, 0, 0.25)",
   ".label": {
