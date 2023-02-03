@@ -14,6 +14,9 @@ import { MobileDialog } from "@features/dialog";
 import { useSelector } from "react-redux";
 import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
+
+import { AlertInfoBanner } from "@features/alertInfoBanner";
+
 export default function BasicAppBar() {
   const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
   const navigate = useRouter();

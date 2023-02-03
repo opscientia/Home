@@ -10,7 +10,7 @@ import {
   Subscribe,
 } from '@features/home'
 import { OpsciCard } from '@features/cards'
-import { Container, Grid, Box, useTheme } from '@mui/material'
+import { Container, Grid, Box, useTheme, Alert } from '@mui/material'
 import { MainLayout } from '@features/layouts'
 const opsicarddata = [
   {

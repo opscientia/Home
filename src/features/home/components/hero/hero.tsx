@@ -8,6 +8,7 @@ import {
   Button,
   Grid,
   Divider,
+  Alert,
 } from "@mui/material";
 import Icon from "@utils/Icon";
 
@@ -18,7 +19,8 @@ function Hero() {
         <Grid
           container
           justifyContent="center"
-          direction={{ xs: "row-reverse" }}>
+          direction={{ xs: "row-reverse" }}
+        >
           <Grid item md={6} sm={12}>
             <Box className="hero-img">
               <Icon path="hero-img" className="logo" />
@@ -31,7 +33,8 @@ function Hero() {
                   variant="h1"
                   textTransform="uppercase"
                   fontFamily="'Exo 2'"
-                  fontWeight={500}>
+                  fontWeight={500}
+                >
                   An Autonomous
                 </Typography>
 
@@ -39,7 +42,8 @@ function Hero() {
                   variant="h1"
                   textTransform="uppercase"
                   fontFamily="'Exo 2'"
-                  fontWeight={500}>
+                  fontWeight={500}
+                >
                   Open Science Society
                 </Typography>
               </Box>
@@ -56,17 +60,20 @@ function Hero() {
                 <Typography
                   variant="h5"
                   fontFamily="'Epilogue'"
-                  fontWeight={400}>
-                  A professional society for high impact scientists with verified open science activity.
-                  Link academic credentials, mint a unique profile, publish openly, and receive rewards.
+                  fontWeight={400}
+                >
+                  A professional society for high impact scientists with
+                  verified open science activity. Link academic credentials,
+                  mint a unique profile, publish openly, and receive rewards.
                 </Typography>
                 <Typography
                   variant="h5"
                   marginTop={2}
                   fontFamily="'Epilogue'"
-                  fontStyle={'italic'}
-                  fontWeight={300}>
-                    Applications Open Soon
+                  fontStyle={"italic"}
+                  fontWeight={300}
+                >
+                  Applications Open Soon
                 </Typography>
                 {/* <Box my={2}>
                   {" "}
