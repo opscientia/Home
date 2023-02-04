@@ -44,7 +44,6 @@
     "react-redux": "^8.0.4",
     "react-slick": "^0.29.0",
     "react-svg": "^15.1.11",
-    "sib-api-v3-typescript": "^2.2.2",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

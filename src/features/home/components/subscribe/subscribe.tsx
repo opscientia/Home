@@ -1,6 +1,7 @@
 import React from "react";
-// import connect from "src/lib/database";
-// import Subscriber from "src/models/Subscriber";
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import SubscribeStyled from "./overrides/subscribeStyle";
 
 import {
@@ -14,13 +15,17 @@ import {
 } from "@mui/material";
 import useWindowSize from "@hooks/windowResize";
 import { useForm, SubmitHandler } from "react-hook-form";
+
 type Inputs = {
   email: string;
 };
 
 function Sponcers() {
   const theme = useTheme();
+  const apiKey = process.env.SIB;
   const [offSetLeft, setOffSetLeft] = React.useState(0);
+  const [open, setOpen] = React.useState(false);
+
   const left = React.useRef(null);
   const windowSize = useWindowSize();
   React.useEffect(() => {
@@ -31,13 +36,51 @@ function Sponcers() {
     React.useState(false);
 
   const { register, handleSubmit, watch, formState } = useForm<Inputs>();
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setOpen(true);
     setIsSuccessfullySubmitted(true);
-    // const newSubscriber = new Subscriber({ email: data.email });
-    // await newSubscriber.save();
-    console.log(data);
+
+    console.log(data);    
+
+    const options = {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        "api-key":
+          apiKey
+      },
+      body: JSON.stringify({ updateEnabled: false, email: data.email }),
+    };
+
+    fetch("https://api.sendinblue.com/v3/contacts", options)
+      .then((response) => response.json())
+      .then((response) => console.log(response))
+      .catch((err) => console.error('error ' + err));
   };
 
+  const action = (
+    <React.Fragment>
+      {/* <Button color="secondary" size="small" onClick={handleClose}>
+        UNDO
+      </Button> */}
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
 
   return (
     <SubscribeStyled component="section" widthoffset={offSetLeft}>
@@ -82,7 +125,6 @@ function Sponcers() {
                           className="emil"
                           type="email"
                           placeholder="Email"
-                          defaultValue="test@email.com"
                           {...register("email")}
                         />
                       </Box>
@@ -92,7 +134,13 @@ function Sponcers() {
                     </Button>
                   </Box>
                   {formState.isSubmitted && (
-                    <div className="success">Thank you for subscribing !</div>
+                     <Snackbar
+                     open={open}
+                     autoHideDuration={5000}
+                     onClose={handleClose}
+                     message="Thank you for Subscribing!"
+                     action={action}
+                   />
                   )}
                 </Stack>
               </Grid>
