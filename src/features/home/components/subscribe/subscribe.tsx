@@ -47,8 +47,7 @@ function Sponcers() {
     setOpen(true);
     setIsSuccessfullySubmitted(true);
 
-    console.log(data);
-    console.log(apiKey)
+    console.log(data);    
 
     const options = {
       method: "POST",
@@ -64,7 +63,7 @@ function Sponcers() {
     fetch("https://api.sendinblue.com/v3/contacts", options)
       .then((response) => response.json())
       .then((response) => console.log(response))
-      .catch((err) => console.error(err));
+      .catch((err) => console.error('error ' + err));
   };
 
   const action = (
