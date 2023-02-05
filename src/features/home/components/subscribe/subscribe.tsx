@@ -57,7 +57,7 @@ function Sponcers() {
         "api-key":
           apiKey
       },
-      body: JSON.stringify({ updateEnabled: false, email: data.email }),
+      body: JSON.stringify({ listIds: [5], updateEnabled: false, email: data.email }),
     };
 
     fetch("https://api.sendinblue.com/v3/contacts", options)
