@@ -1,5 +1,7 @@
 import React from "react";
 import HeroStyled from "./overrides/heroStyle";
+import { AlertInfoBanner } from "@features/alertInfoBanner";
+
 
 import {
   Container,
@@ -16,11 +18,15 @@ function Hero() {
   return (
     <HeroStyled component="section">
       <Container>
+        
+        <AlertInfoBanner/>
         <Grid
           container
           justifyContent="center"
+          sx={{mt:'50px'}}
           direction={{ xs: "row-reverse" }}
         >
+          
           <Grid item md={6} sm={12}>
             <Box className="hero-img">
               <Icon path="hero-img" className="logo" />
@@ -83,6 +89,7 @@ function Hero() {
             </Box>
           </Grid>
         </Grid>
+        
       </Container>
     </HeroStyled>
   );
