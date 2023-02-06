@@ -69,7 +69,7 @@ export default function TransitionAlerts() {
         />{" "}
         <Link href="https://fil.org/blog/case-study-opsci-how-an-open-science-commons-project-built-on-web3-infrastructure-empowers-community-discovery/">
           <GradientText
-            title="See Guide"
+            title="See Case Study"
             gradient="linear-gradient(89.94deg, #FEC6C6 -29.79%, #FDA0FF 101.25%)"
           />
         </Link>{" "}
