@@ -41,7 +41,7 @@ export default function TransitionAlerts() {
         },
       }}
     >
-      <Typography>Check out our case study </Typography>{" "}
+      <Typography>Check out our case study</Typography>{" "}
       <Box
         sx={{
           display: "flex",
