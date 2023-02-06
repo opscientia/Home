@@ -49,6 +49,7 @@ export default function Home() {
         <link rel='icon' href='/Group-react.png' />
       </Head>
 
+
       <Hero />
       <About />
       <Box
@@ -80,6 +81,7 @@ export default function Home() {
           </Grid>
         </Container>
       </Box>
+
       <Box>
         <Testmonial />
       </Box>
