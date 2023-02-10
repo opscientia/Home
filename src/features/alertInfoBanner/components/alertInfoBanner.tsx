@@ -17,7 +17,7 @@ export default function TransitionAlerts() {
   return (
     <Box
       sx={{
-        display: "grid",
+        display: "flex",
         gridTemplateColumns: {
           xs: "repeat(1, 1fr)",
           sm: "repeat(2, 1fr)",
@@ -41,12 +41,14 @@ export default function TransitionAlerts() {
         },
       }}
     >
-      <Typography>Check out our case study</Typography>{" "}
+      <Typography align="center">
+        Explore the impact of OpSci in Desci ecosystem.
+      </Typography>
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          gap: 1,
+          ml: 1,
         }}
       >
         <Typography
@@ -57,26 +59,17 @@ export default function TransitionAlerts() {
           }}
         >
           {" "}
-          by Filecoin
         </Typography>
-        <Box
-          sx={{
-            width: 5,
-            height: 5,
-            background: "#fff",
-            borderRadius: 6,
-          }}
-        />{" "}
-        <Link href="https://fil.org/blog/case-study-opsci-how-an-open-science-commons-project-built-on-web3-infrastructure-empowers-community-discovery/">
+        
+        <Link href="/">
           <GradientText
-            title="See Case Study"
+            title="See case study by Filecoin"
             gradient="linear-gradient(89.94deg, #FEC6C6 -29.79%, #FDA0FF 101.25%)"
           />
-        </Link>{" "}
+        </Link>
         <KeyboardArrowRightIcon
           sx={{
             color: "#FDA0FF",
-            ml: -1,
           }}
         />
       </Box>
