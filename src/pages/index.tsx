@@ -51,7 +51,7 @@ export default function Home() {
 
 
       <Hero />
-      <About />
+      {/* <About /> */}
       {/* <Box
         pb={12}
         sx={{

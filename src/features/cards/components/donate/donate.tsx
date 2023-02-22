@@ -85,7 +85,7 @@ function DonateCard(props: Props) {
                 textAlign: "center",
               }}
             >
-              0x2345..
+            {props.cardData.addr}
             </Typography>
           </Box>
 
@@ -108,7 +108,7 @@ function DonateCard(props: Props) {
                 alignItems: "center",
               }}
             >
-              miller.id.desci.eth
+            {props.cardData.id}
             </Typography>
             <Box
               sx={{
