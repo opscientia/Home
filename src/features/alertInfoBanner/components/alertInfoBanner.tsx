@@ -42,7 +42,7 @@ export default function TransitionAlerts() {
       }}
     >
       <Typography align="center">
-        Explore the impact of OpSci in Desci ecosystem.
+        Explore the impact of OpSci in the DeSci ecosystem.
       </Typography>
       <Box
         sx={{
@@ -63,7 +63,7 @@ export default function TransitionAlerts() {
         
         <Link href="/">
           <GradientText
-            title="See case study by Filecoin"
+            title="See the case study by Filecoin"
             gradient="linear-gradient(89.94deg, #FEC6C6 -29.79%, #FDA0FF 101.25%)"
           />
         </Link>

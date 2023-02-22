@@ -52,7 +52,7 @@ export default function Home() {
 
       <Hero />
       <About />
-      <Box
+      {/* <Box
         pb={12}
         sx={{
           background:
@@ -80,12 +80,12 @@ export default function Home() {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
 
-      <Box>
+      {/* <Box>
         <Testmonial />
       </Box>
-      <Sponcers />
+      <Sponcers /> */}
 
       <Donate />
       <Subscribe />
