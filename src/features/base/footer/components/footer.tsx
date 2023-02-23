@@ -39,7 +39,6 @@ function Footer() {
                 <Icon path='footer' className='logo' />
                 <Icon path='holo-icon' className='logo' />
                 <Icon path='Vector (1)' className='logo' />
-                <Icon path='Vector (2)' className='logo' />
               </Stack>
             </Box>
           </Grid>
