@@ -29,12 +29,12 @@ function Hero() {
 
   return (
     <HeroStyled component="section">
-      <Container>
+      <Box sx={{width:'100vw'}}> 
         <AlertInfoBanner />
         <Grid
           container
           justifyContent="center"
-          sx={{ mt: "50px" }}
+          sx={{ mt: "50px",padding:'50px' }}
           direction={{ xs: "row-reverse" }}
         >
           <Grid item md={6} sm={12}>
@@ -110,7 +110,7 @@ function Hero() {
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      </Box>
     </HeroStyled>
   );
 }

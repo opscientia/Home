@@ -20,7 +20,7 @@ function Footer() {
     <FooterStyled component='footer'>
       <Container>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} sm={5} sx={{ml:'auto',mr:'auto'}}>
             <Box mt={5}>
               <NextLink href='/' className='logo-link'>
                 <a>
@@ -36,13 +36,14 @@ function Footer() {
                 The Open Science Decentralized Autonomous Organization
               </Typography>
               <Stack direction='row' mt={3} spacing={2}>
-                <Icon path='footer' className='logo' />
+                <Icon path='footer' className='logo'     navigatePath={'https://www.google.com/'}
+/>
                 <Icon path='holo-icon' className='logo' />
                 <Icon path='Vector (1)' className='logo' />
               </Stack>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={7}>
+          {/* <Grid item xs={12} sm={7}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
                 <Stack
@@ -83,7 +84,7 @@ function Footer() {
                 </Stack>
               </Grid>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
         <Box mt={11}>
           <Grid

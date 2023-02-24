@@ -55,7 +55,7 @@ export default function BasicAppBar() {
             {isAuthentic ? (
               <MenuPopover user={user} />
             ) : (
-              <Fab
+              authenticatedUser && <Fab
                 onClick={() =>
                   !authenticatedUser && navigate.push("/auth/signin")
                 }
@@ -64,7 +64,7 @@ export default function BasicAppBar() {
                 color="primary"
                 className="btn-sign"
               >
-                {authenticatedUser ? "Welcome Test User" : "Sign In"}
+                Welcome Test User
               </Fab>
             )}
           </Toolbar>
