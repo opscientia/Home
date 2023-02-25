@@ -50,7 +50,7 @@ function Footer() {
                   mt={3}
                   justifyContent='space-between'
                   className='nav-links'>
-                  <List>
+                  {/* <List>
                     {nav1.map((item, i) => (
                       <ListItem key={item.name}>
                         <ListItemButton>
@@ -64,7 +64,7 @@ function Footer() {
                         </ListItemButton>
                       </ListItem>
                     ))}
-                  </List>
+                  </List>`
                   <List>
                     {nav2.map((item, i) => (
                       <ListItem key={item.name}>
@@ -79,7 +79,8 @@ function Footer() {
                         </ListItemButton>
                       </ListItem>
                     ))}
-                  </List>
+                  </List> */}
+                  
                 </Stack>
               </Grid>
             </Grid>
