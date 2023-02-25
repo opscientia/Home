@@ -2,6 +2,7 @@ import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 const HeroStyled = styled(Box)(({ theme }) => ({
   display: "flex",
+  minHeight: "100vh",
   paddingTop: 70,
   alignItems: "center",
   justifyContent: "center",
