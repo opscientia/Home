@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import useWindowSize from "@hooks/windowResize";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Image from "next/image";
 
 type Inputs = {
   email: string;
@@ -96,7 +97,7 @@ function Sponcers() {
                     },
                   }}
                 >
-                  <img src="static/images/react.png" alt="react" />
+                  <Image src="static/images/react.png" alt="react" />
                 </Box>
               </Grid>
               <Grid item md={7} p={3} className="sbscribe">

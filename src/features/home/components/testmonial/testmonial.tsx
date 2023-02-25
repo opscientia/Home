@@ -5,6 +5,7 @@ import { Box, Typography, Button, Stack, Grid } from "@mui/material";
 import { Container } from "@mui/material";
 import { TestmonialCard } from "@features/cards";
 import Slider from "react-slick";
+import Image from "next/image";
 const settings = {
   dots: true,
   infinite: true,
@@ -101,7 +102,7 @@ function Testmonial() {
                 </a>
               </Box> */}
               <Box my={2}>
-                <img src="static/images/Line 1.png" alt="aa" />
+                <Image src="static/images/Line 1.png" alt="aa" />
               </Box>
             </Box>
           </Stack>

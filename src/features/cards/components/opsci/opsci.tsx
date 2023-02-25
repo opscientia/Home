@@ -7,12 +7,13 @@ import {
   CardContent,
   CardActions,
 } from "@mui/material";
+import Image from "next/image";
 function OpSciCard({ data }) {
   return (
     <OpsciStyled>
       <CardContent>
         <Box className="ic-container">
-          <Box component="img" src={data.icon} />
+          <Image src={data.icon} />
         </Box>
         <Typography
           variant="h4"

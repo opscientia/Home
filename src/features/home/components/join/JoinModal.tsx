@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Zoom from "@mui/material/Zoom";
 import { Box } from "@mui/material";
 import Link from "@mui/material/Link";
+import Image from "next/image";
 import { TransitionProps } from "@mui/material/transitions";
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -39,8 +40,9 @@ export default function FullScreenDialog() {
               width: "100%",
               maxWidth: "100%",
             },
-          }}>
-          <Box component="img" src="/static/icons/opsci-dao.svg" />
+          }}
+        >
+          <Image src="/static/icons/opsci-dao.svg" />
         </Link>
       </Box>
       <Dialog
@@ -53,7 +55,8 @@ export default function FullScreenDialog() {
             background: "#000",
             backdropFilter: "blur(20px)",
           },
-        }}>
+        }}
+      >
         <AppBar
           position="static"
           sx={{
@@ -61,13 +64,15 @@ export default function FullScreenDialog() {
             position: "relative",
             background: "transparent",
             textAlign: "center",
-          }}>
+          }}
+        >
           <Toolbar>
             <IconButton
               edge="start"
               color="inherit"
               onClick={handleClose}
-              aria-label="close">
+              aria-label="close"
+            >
               <CloseIcon />
             </IconButton>
           </Toolbar>
@@ -81,8 +86,9 @@ export default function FullScreenDialog() {
               width: "100%",
               maxWidth: "100%",
             },
-          }}>
-          <Box component="img" src="/static/icons/opsci-dao.svg" />
+          }}
+        >
+          <Image src="/static/icons/opsci-dao.svg" />
         </Box>
       </Dialog>
     </Box>

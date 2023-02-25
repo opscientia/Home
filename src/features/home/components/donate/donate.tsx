@@ -33,7 +33,7 @@ const cardMockData: any[] = [
     desc: "Cepheids are important cosmic benchmarks for scaling galactic and extragalactic distances.",
     tag1: "Papers",
     tag2: "Artificial Intelligence",
-    contributors: ["Ellipse.svg", "Ellipse 23.svg"],
+    contributors: ["Ellipse.svg", "/Ellipse 23.svg"],
   },
 
   {
@@ -62,7 +62,7 @@ const cardMockData: any[] = [
     desc: "https://osf.io/zzzz/",
     tag1: "Open Science",
     tag2: "Framework",
-    contributors: ["Ellipse 23.svg", "Ellipse.svg", "Ellipse 23.svg"],
+    contributors: ["/Ellipse 23.svg", "/Ellipse.svg", "/Ellipse 23.svg"],
   },
   {
     addr: "0x5835..",
@@ -73,14 +73,14 @@ const cardMockData: any[] = [
     tag1: "DeSci Tooling",
     tag2: "Astronomy",
     contributors: [
-      "Ellipse 23.svg",
-      "Ellipse.svg",
-      "Ellipse 23.svg",
-      "Ellipse 23.svg",
-      ",Ellipse.svg",
-      "Ellipse 23.svg",
-      "Ellipse.svg",
-      "Ellipse 23.svg",
+      "/Ellipse 23.svg",
+      "/Ellipse.svg",
+      "/Ellipse 23.svg",
+      "/Ellipse 23.svg",
+      "/Ellipse.svg",
+      "/Ellipse 23.svg",
+      "/Ellipse.svg",
+      "/Ellipse 23.svg",
     ],
   },
   {
@@ -91,7 +91,7 @@ const cardMockData: any[] = [
     desc: "Cepheids are important cosmic benchmarks for scaling galactic and extragalactic distances.",
     tag1: "Papers",
     tag2: "Artificial Intelligence",
-    contributors: ["Ellipse.svg", "Ellipse 23.svg"],
+    contributors: ["/Ellipse.svg", "/Ellipse 23.svg"],
   },
 ];
 

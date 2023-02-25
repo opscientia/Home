@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Icon from "@utils/Icon";
 import IconButton from "@mui/material/IconButton";
+import Image from "next/image";
 
 import Divider from "@mui/material/Divider";
 
@@ -53,20 +54,20 @@ function DonateCard(props: Props) {
               borderRadius: "8px",
             }}
           >
-            <Box
-              component="img"
+            <Image
               src="/NFT.svg"
-              sx={{
+              layout="fill"
+              style={{
                 width: "37px",
                 height: "100%",
-                pl: "6px",
-                pr: "4px",
+                paddingLeft: "6px",
+                paddingRight: "4px",
                 borderTopLeftRadius: "8px",
                 borderBottomLeftRadius: "8px",
 
                 background: "#2B2D47",
               }}
-            />
+            ></Image>
             <Typography
               sx={{
                 fontFamily: "'Inter', sans-serif",
@@ -85,7 +86,7 @@ function DonateCard(props: Props) {
                 textAlign: "center",
               }}
             >
-            {props.cardData.addr}
+              {props.cardData.addr}
             </Typography>
           </Box>
 
@@ -108,7 +109,7 @@ function DonateCard(props: Props) {
                 alignItems: "center",
               }}
             >
-            {props.cardData.id}
+              {props.cardData.id}
             </Typography>
             <Box
               sx={{
@@ -141,7 +142,7 @@ function DonateCard(props: Props) {
             border: "none",
           }}
         >
-          <Box component="img" src={props.cardData.img} />
+          <Image src={props.cardData.img} layout="fill" />
           <Typography
             sx={{
               fontWeight: "500",
@@ -168,7 +169,7 @@ function DonateCard(props: Props) {
                 borderRadius: "40px",
                 pl: "6px",
                 pr: "6px",
-                textTransform: 'capitalize'
+                textTransform: "capitalize",
               }}
             >
               {props.cardData.tag1}
@@ -182,8 +183,7 @@ function DonateCard(props: Props) {
                 pr: "6px",
                 background: "rgba(253, 160, 255, 0.2)",
                 borderRadius: "40px",
-                textTransform: 'capitalize'
-
+                textTransform: "capitalize",
               }}
             >
               {props.cardData.tag2}
@@ -227,7 +227,12 @@ function DonateCard(props: Props) {
                   {props.cardData.contributors.map((src: any, index) => {
                     return (
                       index <= 3 && (
-                        <Box component="img" src={src} sx={{ zIndex: "200" }} key={src + index} />
+                        <Image
+                          src={src}
+                          layout="fill"
+                          style={{ zIndex: "200" }}
+                          key={src + index}
+                        />
                       )
                     );
                   })}
@@ -292,7 +297,7 @@ function DonateCard(props: Props) {
             </Box>
           </Stack>
         </CardContent>
-        <CardActions sx={{ pb: '16px !important' }}>
+        <CardActions sx={{ pb: "16px !important" }}>
           <Button
             sx={{
               minHeight: "auto",

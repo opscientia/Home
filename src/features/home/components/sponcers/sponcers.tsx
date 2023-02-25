@@ -1,12 +1,13 @@
-import React from 'react'
-import SponcersStyled from './overrides/sponcersStyle'
-import { Box, Typography } from '@mui/material'
-import Marquee from 'react-fast-marquee'
+import React from "react";
+import SponcersStyled from "./overrides/sponcersStyle";
+import { Box, Typography } from "@mui/material";
+import Marquee from "react-fast-marquee";
+import Image from "next/image";
 
 function Sponcers() {
   const icons = [
-    { name: 'Filecoin', src: '/static/icons/Filecoin.svg' },
-    { name: 'gitcoin', src: '/static/icons/Gitcoin.svg' },
+    { name: "Filecoin", src: "/static/icons/Filecoin.svg" },
+    { name: "gitcoin", src: "/static/icons/Gitcoin.svg" },
     // { name: 'protocol labs', src: '/static/icons/Filecoin.svg' },
     // { name: 'desci world', src: '/static/icons/Filecoin.svg' },
     // { name: 'Fleming Protocol', src: '/static/icons/Filecoin.svg' },
@@ -16,32 +17,32 @@ function Sponcers() {
     // { name: 'LabDAO', src: '/static/icons/Filecoin.svg' },
     // { name: 'W3WS', src: '/static/icons/Filecoin.svg' },
     // { name: 'DeSci Labs', src: '/static/icons/Filecoin.svg' },
-  ]
+  ];
   return (
-    <SponcersStyled component='section'>
+    <SponcersStyled component="section">
       <Box>
         <Typography
           letterSpacing={2.4}
           mb={3}
-          variant='h1'
-          color='primary'
-          textAlign='center'
+          variant="h1"
+          color="primary"
+          textAlign="center"
           fontFamily="'Exo 2'"
-          fontWeight={500}>
+          fontWeight={500}
+        >
           SPONSOR & PARTNERS
         </Typography>
-        <Box justifyContent='center' display='flex' px={3}>
-          <img src='static/images/Line 1.png' alt='fasdf' />
+        <Box justifyContent="center" display="flex" px={3}>
+          <Image src="static/images/Line 1.png" alt="fasdf" />
         </Box>
       </Box>
 
-      <Box className='sponsor-container' px={3}>
+      <Box className="sponsor-container" px={3}>
         <Marquee speed={50} gradient={false}>
           {icons.map((icon, index) => (
-            <Box
+            <Image
               key={index}
-              sx={{ mx: 5 }}
-              component='img'
+              style={{ marginLeft: 5, marginRight: 5 }}
               src={icon.src}
               alt={icon.name}
             />
@@ -71,7 +72,7 @@ function Sponcers() {
         </Marquee>
       </Box>
     </SponcersStyled>
-  )
+  );
 }
 
-export default Sponcers
+export default Sponcers;
