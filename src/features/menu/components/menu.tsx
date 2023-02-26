@@ -70,7 +70,7 @@ export default function Menu({ menu }) {
                     display: "grid",
                     gridTemplateRows:
                       item.title === "dApps"
-                        ? "repeat(4,minmax(0,1fr))"
+                        ? "repeat(3,minmax(0,1fr))"
                         : "repeat(1,minmax(0,1fr))",
                     gridAutoFlow: {
                       xs: "row",

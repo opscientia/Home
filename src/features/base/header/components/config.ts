@@ -9,15 +9,14 @@ export const navbar = [
         subtitle: "A portable account for web-native scientists",
         path: "https://verse.opsci.io/",
       },
-
       {
-        icon: "ic-menu-child-3",
+        icon: "ic-menu-child-2",
         title: "Commons",
         subtitle: "Discover and publish scientific datasets",
         path: "https://commons.opsci.io/",
       },
       {
-        icon: "ic-menu-child-4",
+        icon: "ic-menu-child-3",
         title: "Holonym",
         subtitle: "a zero knowledge smart identity wallet",
         path: "https://www.holonym.id/",
