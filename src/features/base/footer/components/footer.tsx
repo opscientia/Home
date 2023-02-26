@@ -20,7 +20,7 @@ function Footer() {
     <FooterStyled component='footer'>
       <Container>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} sm={5} sx={{ml:'auto',mr:'auto'}}>
             <Box mt={5}>
               <NextLink href='/' className='logo-link'>
                 <a>
@@ -36,69 +36,21 @@ function Footer() {
                 The Open Science Decentralized Autonomous Organization
               </Typography>
               <Stack direction='row' mt={3} spacing={2}>
-                <Icon path='footer' className='logo' />
+                <Icon path='footer' className='logo'     navigatePath={'https://www.google.com/'}
+/>
                 <Icon path='holo-icon' className='logo' />
                 <Icon path='Vector (1)' className='logo' />
               </Stack>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={7}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <Stack
-                  direction='row'
-                  mt={3}
-                  justifyContent='space-between'
-                  className='nav-links'>
-                  {/* <List>
-                    {nav1.map((item, i) => (
-                      <ListItem key={item.name}>
-                        <ListItemButton>
-                          <Typography
-                            variant='body1'
-                            fontFamily="'Exo 2'"
-                            color={i === 0 ? 'primary' : 'text.secondary'}
-                            fontWeight={i === 0 ? '600' : '500'}>
-                            <NextLink href={item.path}>{item.name}</NextLink>
-                          </Typography>
-                        </ListItemButton>
-                      </ListItem>
-                    ))}
-                  </List>`
-                  <List>
-                    {nav2.map((item, i) => (
-                      <ListItem key={item.name}>
-                        <ListItemButton>
-                          <Typography
-                            variant='body1'
-                            fontFamily="'Exo 2'"
-                            color={i === 0 ? 'primary' : 'text.secondary'}
-                            fontWeight={i === 0 ? '600' : '500'}>
-                            <NextLink href={item.path}>{item.name}</NextLink>
-                          </Typography>
-                        </ListItemButton>
-                      </ListItem>
-                    ))}
-                  </List> */}
-                  
-                </Stack>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Box mt={11}>
-          <Grid
-            container
-            direction='row-reverse'
-            justifyContent='center'
-            alignItems='center'
-            spacing={3}>
-            <Grid item xs={12} md={7} sm={12}>
+          <Grid item xs={12} md={7} sm={12} sx={{display:'grid',alignItems:'flex-end'}}>
               <Stack
                 direction={{ sm: 'row', xs: 'column' }}
                 justifyContent={{ sm: 'center' }}
                 spacing={2}
-                alignItems='center'>
+                alignItems='center'
+                
+                sx={{mt:'40px'}}>
                 <Typography
                   variant='body2'
                   textTransform='uppercase'
@@ -124,8 +76,59 @@ function Footer() {
                 </Stack>
               </Stack>
             </Grid>
+          {/* <Grid item xs={12} sm={7}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <Stack
+                  direction='row'
+                  mt={3}
+                  justifyContent='space-between'
+                  className='nav-links'>
+                  <List>
+                    {nav1.map((item, i) => (
+                      <ListItem key={item.name}>
+                        <ListItemButton>
+                          <Typography
+                            variant='body1'
+                            fontFamily="'Exo 2'"
+                            color={i === 0 ? 'primary' : 'text.secondary'}
+                            fontWeight={i === 0 ? '600' : '500'}>
+                            <NextLink href={item.path}>{item.name}</NextLink>
+                          </Typography>
+                        </ListItemButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                  <List>
+                    {nav2.map((item, i) => (
+                      <ListItem key={item.name}>
+                        <ListItemButton>
+                          <Typography
+                            variant='body1'
+                            fontFamily="'Exo 2'"
+                            color={i === 0 ? 'primary' : 'text.secondary'}
+                            fontWeight={i === 0 ? '600' : '500'}>
+                            <NextLink href={item.path}>{item.name}</NextLink>
+                          </Typography>
+                        </ListItemButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Grid> */}
+        </Grid>
+        <Box mt={11}>
+          <Grid
+            container
+            direction='row-reverse'
+            justifyContent='center'
+            alignItems='center'
+            spacing={3}>
+            
             <Grid item xs={12} sm={5}>
-              <Stack alignItems={{ xs: 'center', sm: 'start' }}>
+              <Stack alignItems='center'>
                 <List dense className='policy-privacy'>
                   <ListItem>
                     <NextLink href='/'>
