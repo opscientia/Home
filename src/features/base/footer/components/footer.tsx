@@ -1,4 +1,4 @@
-import { nav1, nav2, navicon } from '@features/base/footer/components/config'
+import { nav1, nav2, navicon } from "@features/base/footer/components/config";
 import {
   Box,
   Container,
@@ -10,72 +10,85 @@ import {
   Stack,
   Typography,
   Link,
-} from '@mui/material'
-import Icon from '@utils/Icon'
-import NextLink from 'next/link'
-import FooterStyled from './overrides/footerStyle'
+} from "@mui/material";
+import Icon from "@utils/Icon";
+import NextLink from "next/link";
+import FooterStyled from "./overrides/footerStyle";
 
 function Footer() {
   return (
-    <FooterStyled component='footer'>
+    <FooterStyled component="footer">
       <Container>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={5} sx={{ml:'auto',mr:'auto'}}>
+          <Grid item xs={12} sm={5} sx={{ ml: "auto", mr: "auto" }}>
             <Box mt={5}>
-              <NextLink href='/' className='logo-link'>
+              <NextLink href="/" className="logo-link">
                 <a>
-                  <Icon path='opsci' className='logo' />
+                  <Icon path="opsci" className="logo" />
                 </a>
               </NextLink>
               <Typography
                 mt={3}
-                variant='h5'
-                textTransform='uppercase'
+                variant="h5"
+                textTransform="uppercase"
                 fontFamily="'Exo 2'"
-                fontWeight={500}>
+                fontWeight={500}
+              >
                 The Open Science Decentralized Autonomous Organization
               </Typography>
-              <Stack direction='row' mt={3} spacing={2}>
-                <Icon path='footer' className='logo'     navigatePath={'https://www.google.com/'}
-/>
-                <Icon path='holo-icon' className='logo' />
-                <Icon path='Vector (1)' className='logo' />
+              <Stack direction="row" mt={3} spacing={2}>
+                <Link href="https://opsci.io">
+                  <Icon path="footer" className="logo" />
+                </Link>
+                <Link href="https://www.holonym.id/">
+                  <Icon path="holo-icon" className="logo" />
+                </Link>
+                <Link href="https://commons.opsci.io/">
+                  <Icon path="Vector (1)" className="logo" />
+                </Link>
               </Stack>
             </Box>
           </Grid>
-          <Grid item xs={12} md={7} sm={12} sx={{display:'grid',alignItems:'flex-end'}}>
-              <Stack
-                direction={{ sm: 'row', xs: 'column' }}
-                justifyContent={{ sm: 'center' }}
-                spacing={2}
-                alignItems='center'
-                
-                sx={{mt:'40px'}}>
-                <Typography
-                  variant='body2'
-                  textTransform='uppercase'
-                  fontFamily="'Exo 2'"
-                  fontWeight={500}>
-                  CONNECT WITH US
-                </Typography>
-                <Stack direction='row' spacing={{ xs: 1, sm: 2 }}>
-                  {navicon.map((item) => (
-                    // <IconButton
-                    //   className='btn-icon'
-                    //   key={item.name}
-                    //   // component='a'
-                    //   href={item.path}>
-                    //   <Icon path={item.name} />
-                    // </IconButton>
-                    <Box key={item.path} className='btn-icon'>
-                      <a href={item.path} target='_blank'>
-                        <Icon path={item.name} />
-                      </a>
-                    </Box>
-                  ))}
-                </Stack>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            sm={12}
+            sx={{ display: "grid", alignItems: "flex-end" }}
+          >
+            <Stack
+              direction={{ sm: "row", xs: "column" }}
+              justifyContent={{ sm: "center" }}
+              spacing={2}
+              alignItems="center"
+              sx={{ mt: "40px" }}
+            >
+              <Typography
+                variant="body2"
+                textTransform="uppercase"
+                fontFamily="'Exo 2'"
+                fontWeight={500}
+              >
+                CONNECT WITH US
+              </Typography>
+              <Stack direction="row" spacing={{ xs: 1, sm: 2 }}>
+                {navicon.map((item) => (
+                  // <IconButton
+                  //   className='btn-icon'
+                  //   key={item.name}
+                  //   // component='a'
+                  //   href={item.path}>
+                  //   <Icon path={item.name} />
+                  // </IconButton>
+                  <Box key={item.path} className="btn-icon">
+                    <a href={item.path} target="_blank">
+                      <Icon path={item.name} />
+                    </a>
+                  </Box>
+                ))}
               </Stack>
-            </Grid>
+            </Stack>
+          </Grid>
           {/* <Grid item xs={12} sm={7}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
@@ -122,22 +135,22 @@ function Footer() {
         <Box mt={11}>
           <Grid
             container
-            direction='row-reverse'
-            justifyContent='center'
-            alignItems='center'
-            spacing={3}>
-            
+            direction="row-reverse"
+            justifyContent="center"
+            alignItems="center"
+            spacing={3}
+          >
             <Grid item xs={12} sm={5}>
-              <Stack alignItems='center'>
-                <List dense className='policy-privacy'>
+              <Stack alignItems="center">
+                <List dense className="policy-privacy">
                   <ListItem>
-                    <NextLink href='/'>
+                    <NextLink href="/">
                       <a>© OpSci {new Date().getFullYear()}</a>
                     </NextLink>
-                    <NextLink href='/'>
+                    <NextLink href="/">
                       <a>Privacy Policy</a>
                     </NextLink>
-                    <NextLink href='/'>
+                    <NextLink href="/">
                       <a>Terms of Use</a>
                     </NextLink>
                   </ListItem>
@@ -148,7 +161,7 @@ function Footer() {
         </Box>
       </Container>
     </FooterStyled>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
