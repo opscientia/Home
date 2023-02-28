@@ -34,7 +34,7 @@ export default function Menu({ menu }) {
     <ClickAwayListener onClickAway={handleClickAway}>
       <MenuStyled>
         {navbar.map((item, idx) => (
-          <ListItem key={idx} className="menu-list" sx={{display:'block'}}>
+          <ListItem key={idx} className="menu-list" sx={{display:{xs:'block',sm:'flex'}}}>
             <ListItemButton
               onClick={handleClick(item)}
               sx={{
@@ -56,9 +56,9 @@ export default function Menu({ menu }) {
               <Collapse
                 sx={{
                   minWidth: { xs: 0, md: item.title === "dApps" ? 200 : 0 },
-                  position:'relative !important',
-                  maxWidth: 'fit-content',
-                  left:'20px'
+                position:{xs:'relative !important',sm:'absolute !important'},
+                maxWidth: {xs:'fit-content',sm:'inherit'},
+                left:{xs:'10px',sm:'auto'}
                 }}
                 in={item.title === collapse}
                 timeout="auto"
@@ -77,7 +77,6 @@ export default function Menu({ menu }) {
                       md: item.title === "dApps" ? "column" : "row",
                     },
                     gridGap: 8,
-                    left:'0',
                     p: 1,
                   }}>
                   {item.children.map((child) => (
@@ -92,8 +91,6 @@ export default function Menu({ menu }) {
                         setcollapse(null);
                       }}
                       key={child.title}>
-
-                        
                       <Stack direction="row" spacing={2}>
                         <ListItemIcon>
                           <IconUrl path={child.icon} />
