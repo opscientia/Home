@@ -38,7 +38,7 @@ function DonateCard(props: Props) {
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          sx={{ background: "#1F2033", height: "44px", p: "8px" }}
+          sx={{ background: "#1F2033", height: "44px", p: "8px", borderRadius: '8px' }}
         >
           <Box
             sx={{
@@ -139,6 +139,7 @@ function DonateCard(props: Props) {
             background: "linear-gradient(156.94deg, #24263E 0%, #1E191F 100%)",
             boxShadow: "none !important",
             border: "none",
+      
           }}
         >
           <Box component="img" src={props.cardData.img} />
