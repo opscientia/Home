@@ -63,7 +63,7 @@ export default function MobileDialog({ ...props }) {
         <Menu menu={menu} />
         <Container>
           <Stack spacing={2}>
-            <Button
+            {/* <Button
               variant="contained"
               sx={{
                 textTransform: "capitalize",
@@ -77,7 +77,7 @@ export default function MobileDialog({ ...props }) {
               variant="holo"
               startIcon={<Icon path="holo" />}>
               Continue with Holo
-            </Button>
+            </Button> */}
           </Stack>
         </Container>
       </Dialog>

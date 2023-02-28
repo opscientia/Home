@@ -292,7 +292,7 @@ function DonateCard(props: Props) {
             </Box>
           </Stack>
         </CardContent>
-        <CardActions sx={{ pb: '16px !important' }}>
+        {/* <CardActions sx={{ pb: '16px !important' }}>
           <Button
             sx={{
               minHeight: "auto",
@@ -324,7 +324,7 @@ function DonateCard(props: Props) {
           >
             Donate to Mint
           </Button>
-        </CardActions>
+        </CardActions> */}
       </DonateStyled>
       <DonateStyled>
         <CardContent>

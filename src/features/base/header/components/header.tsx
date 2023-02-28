@@ -52,7 +52,7 @@ export default function BasicAppBar() {
             <Box ml={"auto"}>
               <Menu menu={menu} />
             </Box>
-            {isAuthentic ? (
+            {/* {isAuthentic ? (
               <MenuPopover user={user} />
             ) : (
               authenticatedUser && <Fab
@@ -66,7 +66,7 @@ export default function BasicAppBar() {
               >
                 Welcome Test User
               </Fab>
-            )}
+            )} */}
           </Toolbar>
         </HeaderStyled>
       )}

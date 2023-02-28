@@ -9,12 +9,7 @@ export const navbar = [
         subtitle: "A portable account for web-native scientists",
         path: "https://verse.opsci.io/",
       },
-      {
-        icon: "ic-menu-child-2",
-        title: "Fellowship",
-        subtitle: "12-week program for software development and research",
-        path: "/",
-      },
+
       {
         icon: "ic-menu-child-3",
         title: "Commons",
