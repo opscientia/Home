@@ -148,12 +148,10 @@ function Footer() {
                     <NextLink href="/">
                       <a>© OpSci {new Date().getFullYear()}</a>
                     </NextLink>
-                    <NextLink href="/">
-                      <a>Privacy Policy</a>
+                    <NextLink href="https://opscientia.notion.site/Privacy-policy-a408c8bdc4bb4f3ca624b95b93136e9c">
+                      <a>Privacy Policy and Terms Of Use</a>
                     </NextLink>
-                    <NextLink href="/">
-                      <a>Terms of Use</a>
-                    </NextLink>
+    
                   </ListItem>
                 </List>
               </Stack>

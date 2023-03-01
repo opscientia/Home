@@ -42,7 +42,7 @@ function Cookies() {
           <Toolbar>
             <Typography>
               This site uses cookies, for purposes included in our
-              <Link href='/'>
+              <Link href='https://opscientia.notion.site/Privacy-policy-a408c8bdc4bb4f3ca624b95b93136e9c'>
                 <MuiLink underline='none' className='privacy-link'>
                   Privacy Policy
                 </MuiLink>
@@ -77,7 +77,7 @@ function Cookies() {
               <Typography sx={{ mx: 2 }}>
                 This site uses cookies, for purposes
                 <br /> included in our{' '}
-                <Link href='/' className='privacy-link'>
+                <Link href='https://opscientia.notion.site/Privacy-policy-a408c8bdc4bb4f3ca624b95b93136e9c' className='privacy-link'>
                   Privacy Policy
                 </Link>
                 .
