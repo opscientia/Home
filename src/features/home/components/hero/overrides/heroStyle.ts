@@ -23,20 +23,27 @@ const HeroStyled = styled(Box)(({ theme }) => ({
   "& .hero-img": {
     display: "flex",
     justifyContent: "center",
+    cursor:'none'
   },
 
   "& .logo": {
+    
     [theme.breakpoints.down("md")]: {
       width: "167px!important",
       display: "flex",
       justifyContent: "center",
       paddingTop: "30px",
-      paddingBottom: "30px",
+      paddingBottom: "30px", 
+     
     },
+    
   },
   "& .hero-btn": {
     fontFamily: "'Exo 2'",
   },
+  "& disable-cursor":{
+    cursor: 'none'
+  }
 }));
 
 export default HeroStyled;

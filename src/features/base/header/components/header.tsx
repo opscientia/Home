@@ -16,6 +16,7 @@ import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
 
 import { AlertInfoBanner } from "@features/alertInfoBanner";
+import Image from "next/image";
 
 export default function BasicAppBar() {
   const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
@@ -44,9 +45,7 @@ export default function BasicAppBar() {
           
           <Toolbar>
             <Link href="/">
-              <a>
-                <Icon path="logo" className="logo" />
-              </a>
+                <Image src="/logo" className="logo" layout="fill" />
             </Link>
 
             <Box ml={"auto"}>
@@ -76,11 +75,7 @@ export default function BasicAppBar() {
           className={scrollY > 200 ? "scrolled" : ""}
         >
           <Toolbar>
-            <Link href="/">
-              <a>
-                <Icon path="logo" className="logo" />
-              </a>
-            </Link>
+                <Icon path="logo" />
             <IconButton sx={{ ml: "auto" }} onClick={() => setOpen(true)}>
               <Icon path="humberg" className="humberg" />
             </IconButton>
