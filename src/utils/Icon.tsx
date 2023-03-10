@@ -2,7 +2,7 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 
 export default function IconUrl({ ...props }) {
-  const { path, className,navigatePath } = props;
+  const { path, className, navigatePath, cursorPref } = props;
   const prefix = "/static/icons/";
   return (
     <ReactSVG
@@ -10,7 +10,7 @@ export default function IconUrl({ ...props }) {
       src={`${prefix}${path}.svg`}
       props
       // onClick={()=>window.location.href=navigatePath}
-      style={{cursor: "pointer"}}
+      style={{ cursor: `${cursorPref ? cursorPref : "pointer"}` }}
     />
   );
 }

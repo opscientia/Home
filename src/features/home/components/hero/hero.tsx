@@ -44,9 +44,7 @@ function Hero() {
           >
             <Grid item md={6} sm={12}>
               <Box className="hero-img">
-                <Link href={'/'}>
-                <Icon path="hero-img" className="logo" />
-                </Link>
+                <Icon path="hero-img" className="logo" cursorPref="none" />
               </Box>
             </Grid>
             <Grid item md={6}>
