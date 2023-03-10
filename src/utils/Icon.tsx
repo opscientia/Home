@@ -9,7 +9,7 @@ export default function IconUrl({ ...props }) {
       className={`react-svg ${className ? className : ""}`}
       src={`${prefix}${path}.svg`}
       props
-      onClick={()=>window.location.href=navigatePath}
+      // onClick={()=>window.location.href=navigatePath}
       style={{cursor: "pointer"}}
     />
   );

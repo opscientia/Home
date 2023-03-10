@@ -44,6 +44,9 @@ export default function BasicAppBar() {
           className={scrollY > 200 ? "scrolled" : ""}
         >
           <Toolbar>
+            <Link href="/">
+              <Icon path="logo" className="logo" />
+            </Link>
             <Box ml={"auto"}>
               <Menu menu={menu} />
             </Box>
@@ -72,7 +75,7 @@ export default function BasicAppBar() {
         >
           <Toolbar>
             <Link href={"/"}>
-              <Icon path="logo" />
+              <Icon path="logo" className="logo" />
             </Link>
             <IconButton sx={{ ml: "auto" }} onClick={() => setOpen(true)}>
               <Icon path="humberg" className="humberg" />
