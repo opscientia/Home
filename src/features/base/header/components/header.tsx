@@ -18,6 +18,7 @@ import MenuPopover from "./menuPopover";
 import { AlertInfoBanner } from "@features/alertInfoBanner";
 import Image from "next/image";
 import Typography from "src/theme/overrides/Typography";
+import Button from "src/theme/overrides/Button";
 
 export default function BasicAppBar() {
   const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
