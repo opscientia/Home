@@ -1,6 +1,5 @@
 import React from "react";
 import HeroStyled from "./overrides/heroStyle";
-import AboutStyled from "../about/overrides/aboutStyle";
 import { useRouter } from "next/router";
 import useWindowSize from "@hooks/windowResize";
 
@@ -45,7 +44,7 @@ function Hero() {
           >
             <Grid item md={6} sm={12}>
               <Box className="hero-img">
-                <Icon path="hero-img" className="logo" />
+                <Icon path="hero-img" className="logo" cursorPref="none" />
               </Box>
             </Grid>
             <Grid item md={6}>

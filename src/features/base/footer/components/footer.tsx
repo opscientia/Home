@@ -22,11 +22,9 @@ function Footer() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={5} sx={{ ml: "auto", mr: "auto" }}>
             <Box mt={5}>
-              <NextLink href="/" className="logo-link">
-                <a>
-                  <Icon path="opsci" className="logo" />
-                </a>
-              </NextLink>
+              <Link href="/">
+                <Icon path="opsci" className="logo" />
+              </Link>
               <Typography
                 mt={3}
                 variant="h5"
@@ -151,7 +149,6 @@ function Footer() {
                     <NextLink href="https://opscientia.notion.site/Privacy-policy-a408c8bdc4bb4f3ca624b95b93136e9c">
                       <a>Privacy Policy and Terms Of Use</a>
                     </NextLink>
-    
                   </ListItem>
                 </List>
               </Stack>
