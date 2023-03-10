@@ -23,7 +23,6 @@ const HeroStyled = styled(Box)(({ theme }) => ({
   "& .hero-img": {
     display: "flex",
     justifyContent: "center",
-    cursor:'none'
   },
 
   "& .logo": {
@@ -41,9 +40,7 @@ const HeroStyled = styled(Box)(({ theme }) => ({
   "& .hero-btn": {
     fontFamily: "'Exo 2'",
   },
-  "& disable-cursor":{
-    cursor: 'none'
-  }
+
 }));
 
 export default HeroStyled;
