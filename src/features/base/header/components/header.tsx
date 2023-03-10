@@ -17,6 +17,7 @@ import MenuPopover from "./menuPopover";
 
 import { AlertInfoBanner } from "@features/alertInfoBanner";
 import Image from "next/image";
+import Typography from "src/theme/overrides/Typography";
 
 export default function BasicAppBar() {
   const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
@@ -42,12 +43,7 @@ export default function BasicAppBar() {
           position="fixed"
           className={scrollY > 200 ? "scrolled" : ""}
         >
-          
           <Toolbar>
-            <Link href="/">
-                <Image src="/logo" className="logo" layout="fill" />
-            </Link>
-
             <Box ml={"auto"}>
               <Menu menu={menu} />
             </Box>
@@ -75,7 +71,9 @@ export default function BasicAppBar() {
           className={scrollY > 200 ? "scrolled" : ""}
         >
           <Toolbar>
-                <Icon path="logo" />
+            <Link href={"/"}>
+              <Icon path="logo" />
+            </Link>
             <IconButton sx={{ ml: "auto" }} onClick={() => setOpen(true)}>
               <Icon path="humberg" className="humberg" />
             </IconButton>
