@@ -26,21 +26,17 @@ const HeroStyled = styled(Box)(({ theme }) => ({
   },
 
   "& .logo": {
-    
     [theme.breakpoints.down("md")]: {
       width: "167px!important",
       display: "flex",
       justifyContent: "center",
       paddingTop: "30px",
-      paddingBottom: "30px", 
-     
+      paddingBottom: "30px",
     },
-    
   },
   "& .hero-btn": {
     fontFamily: "'Exo 2'",
   },
-
 }));
 
 export default HeroStyled;
