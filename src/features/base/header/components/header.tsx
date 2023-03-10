@@ -1,24 +1,16 @@
 import * as React from "react";
-import { useEffect } from "react";
-
 import Toolbar from "@mui/material/Toolbar";
 import Icon from "@utils/Icon";
-import Link from "next/link";
 import HeaderStyled from "./overrides/headerStyle";
 import { Box, Fab, IconButton } from "@mui/material";
 import { Menu } from "@features/menu";
 import * as menu from "./config";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import useResponsive from "@hooks/useResponsive";
 import { MobileDialog } from "@features/dialog";
 import { useSelector } from "react-redux";
 import { userSelector } from "@redux/userSlice";
 import MenuPopover from "./menuPopover";
-
-import { AlertInfoBanner } from "@features/alertInfoBanner";
-import Image from "next/image";
-import Typography from "src/theme/overrides/Typography";
-import Button from "src/theme/overrides/Button";
 
 export default function BasicAppBar() {
   const { isAuthentic, user, authenticatedUser } = useSelector(userSelector);
@@ -45,9 +37,10 @@ export default function BasicAppBar() {
           className={scrollY > 200 ? "scrolled" : ""}
         >
           <Toolbar>
-            <Link href="/">
-              <Icon path="logo" className="logo" />
-            </Link>
+            <a href={"/"}>
+              <img src="/static/icons/logo.svg" alt="logo" className="logo" />
+            </a>
+
             <Box ml={"auto"}>
               <Menu menu={menu} />
             </Box>
@@ -75,9 +68,9 @@ export default function BasicAppBar() {
           className={scrollY > 200 ? "scrolled" : ""}
         >
           <Toolbar>
-            <Link href={"/"}>
-              <Icon path="logo" className="logo" />
-            </Link>
+            <a href={"/"}>
+              <img src="/static/icons/logo.svg" alt="logo" className="logo" />
+            </a>{" "}
             <IconButton sx={{ ml: "auto" }} onClick={() => setOpen(true)}>
               <Icon path="humberg" className="humberg" />
             </IconButton>
