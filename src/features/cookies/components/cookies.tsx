@@ -42,7 +42,7 @@ function Cookies() {
         {isDesktop && (
           <Toolbar>
             <Typography>
-              This site uses cookies, for purposeddddddddds included in our
+              This site uses cookies, for purposes included in our
               <MuiLink
                 underline="none"
                 className="privacy-link"
