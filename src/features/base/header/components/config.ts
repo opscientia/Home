@@ -27,7 +27,13 @@ export const navbar = [
         title: "Silk",
         subtitle: "Secure seamless keys for the open internet",
         path: "https://www.silk.sc/",
-      },      
+      },
+      {
+        icon: "ic-menu-child-5",
+        title: "DeSci.Denver",
+        subtitle: "Present, learn and connect",
+        path: "https://denver.desci.community/",
+      },            
     ],
   },
 
