@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpSci Home</title>
+        <title>OpSci | Home</title>
         <meta name='description' content='Knowledge for the People' />
         <link rel='icon' href='/Group-react.png' />
       </Head>
