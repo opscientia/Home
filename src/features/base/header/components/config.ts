@@ -19,7 +19,7 @@ export const navbar = [
       {
         icon: "ic-menu-child-4",
         title: "Holonym",
-        subtitle: "a zero knowledge smart identity wallet",
+        subtitle: "zero knowledge identity",
         path: "https://www.holonym.id/",
       },
       {
