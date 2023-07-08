@@ -109,7 +109,7 @@ function Hero() {
                       data-tf-transitive-search-params=""
                       data-tf-medium="snippet"
                     >
-                      Apply
+                      Join the DeSci Registry
                     </Button>
                   </Box>
                 </Box>
