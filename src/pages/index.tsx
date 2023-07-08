@@ -35,7 +35,7 @@ const opsicarddata = [
     description:
       'Commons is a free, open-access platform for publishing and discovering large scientific datasets, computational workflows, and digital laboratory notebooks. Knowledge artifacts are permanently archived on decentralized storage networks.',
     action: 'DISCOVER & PUBLISH',
-    href: 'https://commons.opsci.io/',
+    href: 'https://commons.opsci.xyz/',
   },
 ]
 
@@ -45,7 +45,7 @@ export default function Home() {
     <div>
       <Head>
         <title>OpSci Home</title>
-        <meta name='description' content='An Autonomous Open Science Society' />
+        <meta name='description' content='Knowledge for the People' />
         <link rel='icon' href='/Group-react.png' />
       </Head>
 
