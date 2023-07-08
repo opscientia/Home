@@ -56,7 +56,7 @@ function Hero() {
                     fontFamily="'Exo 2'"
                     fontWeight={500}
                   >
-                    An Autonomous
+                    Knowledge
                   </Typography>
 
                   <Typography
@@ -65,7 +65,7 @@ function Hero() {
                     fontFamily="'Exo 2'"
                     fontWeight={500}
                   >
-                    Open Science Society
+                    For the People
                   </Typography>
                 </Box>
 
