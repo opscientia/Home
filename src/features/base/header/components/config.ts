@@ -7,14 +7,14 @@ export const navbar = [
         icon: "ic-menu-child-1",
         title: "Verse",
         subtitle: "A portable account for web-native scientists",
-        path: "https://verse.opsci.io/",
+        path: "https://verse.opsci.xyz/",
       },
 
       {
         icon: "ic-menu-child-3",
         title: "Commons",
         subtitle: "Discover and publish scientific datasets",
-        path: "https://commons.opsci.io/",
+        path: "https://commons.opsci.xyz/",
       },
       {
         icon: "ic-menu-child-4",
@@ -22,6 +22,12 @@ export const navbar = [
         subtitle: "a zero knowledge smart identity wallet",
         path: "https://www.holonym.id/",
       },
+      {
+        icon: "ic-menu-child-5",
+        title: "Silk",
+        subtitle: "Secure seamless keys for the open internet",
+        path: "https://www.silk.sc/",
+      },      
     ],
   },
 
