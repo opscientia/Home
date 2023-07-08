@@ -29,7 +29,7 @@ export const navbar = [
         path: "https://www.silk.sc/",
       },
       {
-        icon: "ic-menu-child-5",
+        icon: "ic-menu-child-6",
         title: "DeSci.Denver",
         subtitle: "Present, learn and connect",
         path: "https://denver.desci.community/",
