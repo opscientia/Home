@@ -78,15 +78,6 @@ function Hero() {
                 />
 
                 <Box>
-                  <Typography
-                    variant="h5"
-                    fontFamily="'Epilogue'"
-                    fontWeight={400}
-                  >
-                    A professional society for high impact scientists with
-                    verified open science activity. Link academic credentials,
-                    mint a unique profile, publish openly, and receive rewards.
-                  </Typography>
 
                   <Typography
                     mt={3}
@@ -94,10 +85,9 @@ function Hero() {
                     fontFamily="'Epilogue'"
                     fontWeight={400}
                   >
-                    Join us and experiment with a web-native autonomous
-                    framework for research that is community-owned, built on
+                    A framework for web-native research that is community-owned, built on
                     open source protocols, runs on a decentralized network, and
-                    engineered for digital collaboration.
+                    is engineered for digital collaboration.
                   </Typography>
                   {/* <Typography
                   variant="h5"
