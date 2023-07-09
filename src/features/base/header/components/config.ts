@@ -32,8 +32,8 @@ export const navbar = [
         icon: "ic-menu-child-6",
         title: "DeSci.Denver",
         subtitle: "Present, learn and connect",
-        path: "https://denver.desci.community/",
-      },            
+        path: "https://Denver.DeSci.community"
+      },
     ],
   },
 

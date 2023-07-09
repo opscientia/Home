@@ -34,7 +34,7 @@ export default function Menu({ menu }) {
     <ClickAwayListener onClickAway={handleClickAway}>
       <MenuStyled>
         {navbar.map((item, idx) => (
-          <ListItem key={idx} className="menu-list" sx={{display:{xs:'block',sm:'flex'}}}>
+          <ListItem key={idx} className="menu-list" sx={{ display: { xs: 'block', sm: 'flex' } }}>
             <ListItemButton
               onClick={handleClick(item)}
               sx={{
@@ -55,10 +55,10 @@ export default function Menu({ menu }) {
             {item.children && (
               <Collapse
                 sx={{
-                  minWidth: { xs: 0, md: item.title === "dApps" ? 200 : 0 },
-                position:{xs:'relative !important',sm:'absolute !important'},
-                maxWidth: {xs:'fit-content',sm:'inherit'},
-                left:{xs:'10px',sm:'auto'}
+                  minWidth: { xs: 0, md: item.title === "dApps" ? 500 : 0 },
+                  position: { xs: 'relative !important', sm: 'absolute !important' },
+                  maxWidth: { xs: 'fit-content', sm: 'inherit' },
+                  left: { xs: '10px', sm: item.title === 'dApps' ? '-300px' : 'auto', }
                 }}
                 in={item.title === collapse}
                 timeout="auto"
@@ -68,14 +68,24 @@ export default function Menu({ menu }) {
                   disablePadding
                   sx={{
                     display: "grid",
-                    gridTemplateRows:
-                      item.title === "dApps"
-                        ? "repeat(3,minmax(0,1fr))"
-                        : "repeat(1,minmax(0,1fr))",
-                    gridAutoFlow: {
-                      xs: "row",
-                      md: item.title === "dApps" ? "column" : "row",
-                    },
+                    // gridTemplateRows:
+                    //   item.title === "dApps"
+                    //     ? "repeat(3,minmax(0,1fr))"
+                    //     : "repeat(1,minmax(0,1fr))",
+                    // gridAutoFlow: {
+                    //   xs: "row",
+                    //   md: item.title === "dApps" ? "column" : "row",
+                    // },
+                    ...(item.title !== 'dApps' && {
+                      gridTemplateRows: 'repeat(1,minmax(0,1fr))',
+                      gridAutoFlow: 'row',
+                    }),
+                    ...(item.title === 'dApps' && {
+                      gridTemplateColumns: {
+                        xs: 'repeat(1,minmax(0,1fr))',
+                        md: 'repeat(2,minmax(0,1fr))',
+                      },
+                    }),
                     gridGap: 8,
                     p: 1,
                   }}>
@@ -87,9 +97,12 @@ export default function Menu({ menu }) {
                         alignItems: "flex-start",
                       }}
                       onClick={() => {
-                        navigate.push(child.path);
+                        // navigate.push(child.path);
                         setcollapse(null);
                       }}
+                      component="a"
+                      href={child.path}
+                      target="_blank"
                       key={child.title}>
                       <Stack direction="row" spacing={2}>
                         <ListItemIcon>
